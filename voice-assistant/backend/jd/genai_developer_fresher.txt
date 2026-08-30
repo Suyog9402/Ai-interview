@@ -1,0 +1,139 @@
+JOB DESCRIPTION: GENERATIVE AI DEVELOPER - FRESHER/ENTRY LEVEL
+
+Position: Generative AI Developer (Fresher/Entry Level)
+Department: Engineering
+Location: Remote/Hybrid
+Employment Type: Full-time
+Experience Level: 0-2 years (Fresh Graduates Welcome)
+
+COMPANY OVERVIEW:
+We are building an innovative AI-powered interview assistant platform that revolutionizes the hiring process through intelligent voice interactions, real-time transcription, and comprehensive candidate evaluation.
+
+JOB SUMMARY:
+We are seeking enthusiastic fresh graduates and entry-level developers with a passion for AI/ML to join our engineering team. You will work alongside experienced AI developers to learn and contribute to our intelligent interview platform. This is an excellent opportunity to work with cutting-edge AI technologies including large language models, speech recognition, and natural language processing while building your career.
+
+KEY RESPONSIBILITIES:
+
+1. Learning & Development:
+   - Learn Python and AI/ML libraries (NumPy, Pandas, Scikit-learn)
+   - Understand machine learning fundamentals and concepts
+   - Learn about large language models and transformer architectures
+   - Understand natural language processing basics
+
+2. AI Model Support:
+   - Assist in integrating AI/ML APIs under senior developer guidance
+   - Learn about model fine-tuning and optimization
+   - Understand AI model deployment and serving
+   - Assist in basic AI model evaluation and testing
+
+3. Natural Language Processing (Learning):
+   - Learn NLP techniques and libraries (NLTK, spaCy)
+   - Understand text preprocessing and feature engineering
+   - Learn about sentiment analysis and text classification
+   - Assist in basic NLP pipeline development
+
+4. Speech Recognition Support:
+   - Learn about speech-to-text and text-to-speech services
+   - Understand audio processing and transcription
+   - Assist in basic speech recognition integration
+   - Learn about voice activity detection
+
+5. Data Processing (Learning):
+   - Learn data preprocessing and feature engineering
+   - Understand data cleaning and validation
+   - Learn about data visualization and analysis
+   - Assist in basic data pipeline development
+
+6. AI Ethics & Safety (Learning):
+   - Learn about AI bias and fairness concepts
+   - Understand responsible AI development practices
+   - Learn about AI safety and content filtering
+   - Assist in basic AI ethics implementation
+
+7. Model Deployment Support:
+   - Learn about model serving and deployment
+   - Understand basic MLOps concepts
+   - Assist in model monitoring and evaluation
+   - Learn about cloud AI services
+
+8. Team Collaboration:
+   - Participate in AI/ML team meetings and discussions
+   - Learn from senior AI developers and researchers
+   - Collaborate with backend and frontend developers
+   - Ask questions and seek mentorship
+
+REQUIRED SKILLS & EXPERIENCE:
+
+Educational Background:
+- Bachelor's degree in Computer Science, AI/ML, Data Science, or related field
+- Strong academic performance in AI/ML courses
+- Final year students with AI/ML project experience welcome
+
+Technical Skills (Basic to Intermediate):
+- Good understanding of Python programming language
+- Basic knowledge of machine learning concepts
+- Understanding of data structures and algorithms
+- Basic knowledge of statistics and mathematics
+- Familiarity with Git version control
+
+Programming Knowledge:
+- Python (basic to intermediate level)
+- Basic understanding of object-oriented programming
+- Knowledge of data structures and algorithms
+- Basic understanding of linear algebra and calculus
+- Understanding of probability and statistics
+
+AI/ML Knowledge (Learning):
+- Basic machine learning concepts and algorithms
+- Understanding of supervised and unsupervised learning
+- Knowledge of model evaluation metrics
+- Basic understanding of neural networks
+- Familiarity with popular AI/ML libraries
+
+Soft Skills:
+- Strong willingness to learn and grow
+- Good problem-solving and analytical abilities
+- Excellent communication skills
+- Team player with collaborative mindset
+- Self-motivated and eager to take on challenges
+- Attention to detail and analytical thinking
+
+PREFERRED QUALIFICATIONS:
+- Personal projects or research in AI/ML
+- Internship experience in AI/ML or data science
+- Knowledge of any AI/ML framework (TensorFlow, PyTorch)
+- Understanding of basic NLP concepts
+- Experience with data analysis and visualization
+- Participation in AI/ML competitions or hackathons
+
+LEARNING OPPORTUNITIES:
+- Mentorship from senior AI developers and researchers
+- Training on modern AI/ML technologies and frameworks
+- Exposure to large language models and NLP
+- Speech recognition and audio processing
+- AI ethics and responsible AI development
+- Model deployment and MLOps practices
+
+EDUCATION:
+- Bachelor's degree in Computer Science, AI/ML, Data Science, or related field
+- Final year students with strong AI/ML background
+- Relevant certifications or courses in AI/ML
+
+BENEFITS:
+- Competitive entry-level salary
+- Health, dental, and vision insurance
+- Flexible work hours and remote work options
+- Comprehensive training and mentorship program
+- Access to cutting-edge AI/ML tools and resources
+- Collaborative and supportive work environment
+- Clear career progression path
+
+WORK ENVIRONMENT:
+- Supportive learning environment
+- Mentorship from experienced AI researchers and developers
+- Regular AI/ML training sessions and workshops
+- Opportunity to work on real-world AI projects
+- Collaborative team culture
+- Continuous learning and skill development
+
+This role is perfect for fresh graduates who are passionate about AI/ML and want to start their career in a fast-growing AI company. You'll receive comprehensive training and mentorship while working on cutting-edge AI technologies that are transforming the hiring industry. 

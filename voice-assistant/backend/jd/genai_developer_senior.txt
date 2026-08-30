@@ -1,0 +1,149 @@
+JOB DESCRIPTION: SENIOR GENERATIVE AI DEVELOPER
+
+Position: Senior Generative AI Developer
+Department: Engineering
+Location: Remote/Hybrid
+Employment Type: Full-time
+Experience Level: 5+ years (Senior/Lead Level)
+
+COMPANY OVERVIEW:
+We are building an innovative AI-powered interview assistant platform that revolutionizes the hiring process through intelligent voice interactions, real-time transcription, and comprehensive candidate evaluation.
+
+JOB SUMMARY:
+We are seeking an experienced Senior Generative AI Developer to lead our AI/ML engineering efforts. You will be responsible for architecting, developing, and optimizing advanced AI models that power our intelligent interview platform. You'll lead AI research initiatives, mentor junior developers, and drive innovation in AI/ML technologies.
+
+KEY RESPONSIBILITIES:
+
+1. AI Research & Development Leadership:
+   - Lead AI research initiatives and model development
+   - Architect advanced AI/ML solutions for interview scenarios
+   - Design and implement custom AI models and pipelines
+   - Drive innovation in generative AI and NLP technologies
+   - Establish AI development standards and best practices
+
+2. Advanced Model Development:
+   - Develop and fine-tune large language models for specific domains
+   - Implement advanced NLP techniques and transformer architectures
+   - Design custom AI models for interview intelligence
+   - Optimize model performance and inference speed
+   - Implement advanced model evaluation and testing frameworks
+
+3. Speech Recognition & Processing Leadership:
+   - Lead speech recognition and audio processing initiatives
+   - Design advanced speech-to-text and text-to-speech systems
+   - Implement real-time audio processing and transcription
+   - Optimize speech recognition accuracy and performance
+   - Handle multilingual and accent-aware speech processing
+
+4. AI Ethics & Safety Leadership:
+   - Lead AI ethics and responsible AI development initiatives
+   - Implement advanced bias detection and mitigation strategies
+   - Design AI safety and content filtering systems
+   - Ensure compliance with AI ethics guidelines and regulations
+   - Drive transparency and explainability in AI systems
+
+5. Real-time AI Processing Leadership:
+   - Architect real-time AI inference pipelines
+   - Design scalable AI model serving infrastructure
+   - Optimize AI model latency for live interview scenarios
+   - Implement advanced AI model versioning and A/B testing
+   - Handle concurrent AI processing and load balancing
+
+6. Data Science & Analytics Leadership:
+   - Lead data science initiatives and advanced analytics
+   - Design complex data processing and feature engineering pipelines
+   - Implement advanced interview performance analytics
+   - Develop behavioral analysis and personality insights
+   - Create predictive models for candidate evaluation
+
+7. MLOps & Model Deployment Leadership:
+   - Lead MLOps initiatives and model lifecycle management
+   - Design advanced model deployment and serving strategies
+   - Implement comprehensive model monitoring and observability
+   - Automate model retraining and deployment pipelines
+   - Ensure model reliability and performance in production
+
+8. Team Leadership & Mentorship:
+   - Lead and mentor junior AI developers and researchers
+   - Conduct technical interviews and code reviews
+   - Provide technical guidance and architecture decisions
+   - Collaborate with product managers and stakeholders
+   - Drive AI innovation and technical excellence
+
+REQUIRED SKILLS & EXPERIENCE:
+
+Technical Leadership:
+- 5+ years of experience in AI/ML development
+- Proven experience leading AI/ML teams and projects
+- Strong research and development capabilities
+- Experience with large-scale AI systems
+- Ability to make critical technical decisions
+
+Advanced AI/ML Skills:
+- Expert-level Python programming and AI/ML libraries
+- Deep understanding of transformer models and attention mechanisms
+- Advanced knowledge of NLP techniques and libraries
+- Expert knowledge of speech recognition and audio processing
+- Advanced understanding of machine learning algorithms
+
+AI/ML Technologies:
+- Expert-level experience with PyTorch, TensorFlow, or similar frameworks
+- Advanced knowledge of Hugging Face Transformers and model fine-tuning
+- Expert-level experience with OpenAI API, Anthropic API, and other AI services
+- Advanced knowledge of speech recognition libraries (Whisper, SpeechRecognition)
+- Expert-level experience with vector databases and embeddings
+
+Research & Development:
+- Experience with AI research and model development
+- Advanced knowledge of transformer architectures and attention mechanisms
+- Experience with custom model development and fine-tuning
+- Advanced understanding of AI model optimization and performance tuning
+- Experience with AI model evaluation and testing frameworks
+
+MLOps & Deployment:
+- Advanced MLOps and model lifecycle management experience
+- Expert-level knowledge of model deployment and serving
+- Advanced experience with model monitoring and observability
+- Experience with automated model retraining and deployment
+- Advanced knowledge of cloud AI services and infrastructure
+
+Leadership Skills:
+- Strong technical leadership and decision-making abilities
+- Excellent communication and stakeholder management
+- Experience mentoring and developing junior AI developers
+- Ability to drive AI innovation and technical excellence
+- Strong problem-solving and analytical thinking
+
+PREFERRED QUALIFICATIONS:
+- PhD in Computer Science, AI/ML, or related field
+- Experience with interview or HR technology platforms
+- Advanced knowledge of behavioral psychology and assessment methods
+- Experience with real-time AI processing and streaming
+- Advanced understanding of AI ethics and responsible AI development
+- Experience with multimodal AI (text, audio, video)
+- Advanced knowledge of AI safety and content moderation
+- Experience with high-performance AI systems
+
+EDUCATION:
+- Master's degree in Computer Science, AI/ML, or related field
+- PhD preferred
+- Relevant certifications in AI/ML technologies
+
+BENEFITS:
+- Competitive senior-level salary and equity package
+- Health, dental, and vision insurance
+- Flexible work hours and remote work options
+- Professional development and conference opportunities
+- Access to cutting-edge AI/ML tools and resources
+- Leadership and career growth opportunities
+- Collaborative and innovative work environment
+
+WORK ENVIRONMENT:
+- Fast-paced startup environment with AI research opportunities
+- Opportunity to work with state-of-the-art AI technologies
+- Lead AI initiatives and mentor team members
+- Regular AI/ML conferences and workshops
+- Continuous learning and skill development
+- Impact on AI product architecture and technical direction
+
+This role offers an exciting opportunity to lead AI/ML initiatives in a groundbreaking AI-powered platform that's transforming the hiring industry. You'll have the chance to develop cutting-edge AI solutions, mentor talented AI developers, and make significant technical decisions that impact the product's success. 

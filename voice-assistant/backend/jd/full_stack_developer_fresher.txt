@@ -1,0 +1,139 @@
+JOB DESCRIPTION: FULL STACK DEVELOPER - FRESHER/ENTRY LEVEL
+
+Position: Full Stack Developer (Fresher/Entry Level)
+Department: Engineering
+Location: Remote/Hybrid
+Employment Type: Full-time
+Experience Level: 0-2 years (Fresh Graduates Welcome)
+
+COMPANY OVERVIEW:
+We are building an innovative AI-powered interview assistant platform that revolutionizes the hiring process through intelligent voice interactions, real-time transcription, and comprehensive candidate evaluation.
+
+JOB SUMMARY:
+We are seeking enthusiastic fresh graduates and entry-level developers to join our full stack engineering team. You will work alongside experienced developers to learn and contribute to both frontend and backend components of our AI interview platform. This is an excellent opportunity to work with modern technologies including React, FastAPI, WebRTC, and AI integrations while building your career.
+
+KEY RESPONSIBILITIES:
+
+1. Learning & Development:
+   - Learn both frontend (React, TypeScript) and backend (Python, FastAPI) technologies
+   - Understand full stack development concepts and architecture
+   - Learn about real-time communication and WebRTC
+   - Understand database design and API development
+
+2. Frontend Development Support:
+   - Assist in building responsive user interfaces under guidance
+   - Learn React.js and modern React patterns
+   - Implement basic components and pages
+   - Learn about state management and data flow
+
+3. Backend Development Support:
+   - Assist in building RESTful APIs under senior developer guidance
+   - Learn FastAPI framework and Python best practices
+   - Write basic CRUD operations and database queries
+   - Learn about authentication and security practices
+
+4. Full Stack Integration (Learning):
+   - Learn how frontend and backend communicate
+   - Understand API integration and data flow
+   - Assist in connecting frontend and backend components
+   - Learn about error handling and validation
+
+5. Real-time Features (Learning):
+   - Learn about WebRTC and real-time communication
+   - Understand WebSocket connections and live data
+   - Assist in basic real-time feature implementation
+   - Learn about audio/video device management
+
+6. Database & Data Management (Learning):
+   - Learn database design and schema creation
+   - Write basic SQL queries and understand relationships
+   - Assist in database migrations and data seeding
+   - Learn about data validation and security
+
+7. Testing & Quality Assurance:
+   - Write basic unit tests for both frontend and backend
+   - Learn testing frameworks (Jest, React Testing Library, pytest)
+   - Understand integration testing concepts
+   - Learn about code quality and best practices
+
+8. Modern Development Tools:
+   - Learn Git version control and collaborative development
+   - Understand modern build tools and package managers
+   - Learn development tools (ESLint, Prettier, Black)
+   - Understand deployment and DevOps basics
+
+REQUIRED SKILLS & EXPERIENCE:
+
+Educational Background:
+- Bachelor's degree in Computer Science, Software Engineering, or related field
+- Strong academic performance in programming courses
+- Final year students with internship experience welcome
+
+Technical Skills (Basic to Intermediate):
+- Good understanding of JavaScript and Python programming languages
+- Basic knowledge of web development concepts
+- Understanding of HTML5, CSS3, and responsive design
+- Basic knowledge of databases and SQL
+- Familiarity with Git version control
+
+Programming Knowledge:
+- JavaScript (basic to intermediate level)
+- Python (basic to intermediate level)
+- Basic understanding of object-oriented programming
+- Knowledge of data structures and algorithms
+- Basic understanding of web technologies
+
+Full Stack Technologies (Learning):
+- React.js and modern React patterns
+- TypeScript basics
+- FastAPI or similar web frameworks
+- PostgreSQL or similar databases
+- Modern build tools and bundlers
+
+Soft Skills:
+- Strong willingness to learn and grow
+- Good problem-solving abilities
+- Excellent communication skills
+- Team player with collaborative mindset
+- Self-motivated and eager to take on challenges
+- Attention to detail and code quality
+
+PREFERRED QUALIFICATIONS:
+- Personal projects or portfolio showcasing full stack development
+- Internship experience in web development
+- Knowledge of any web framework (React, Vue, Angular, Django, Flask)
+- Understanding of basic security concepts
+- Experience with any cloud platform (AWS, GCP, Azure)
+- Participation in coding competitions or hackathons
+
+LEARNING OPPORTUNITIES:
+- Mentorship from senior full stack developers
+- Training on modern frontend and backend technologies
+- Exposure to real-time communication development
+- AI/ML integration and understanding
+- Cloud deployment and DevOps practices
+- Code review and best practices training
+
+EDUCATION:
+- Bachelor's degree in Computer Science, Software Engineering, or related field
+- Final year students with strong programming background
+- Relevant certifications or courses in web development
+
+BENEFITS:
+- Competitive entry-level salary
+- Health, dental, and vision insurance
+- Flexible work hours and remote work options
+- Comprehensive training and mentorship program
+- Modern development tools and equipment
+- Collaborative and supportive work environment
+- Clear career progression path
+
+WORK ENVIRONMENT:
+- Supportive learning environment
+- Mentorship from experienced full stack developers
+- Regular training sessions and workshops
+- Opportunity to work on real-world projects
+- Collaborative team culture
+- Continuous learning and skill development
+
+This role is perfect for fresh graduates who are passionate about both frontend and backend development and want to start their career in a fast-growing AI company. You'll receive comprehensive training and mentorship while working on cutting-edge technologies that are transforming the hiring industry. 

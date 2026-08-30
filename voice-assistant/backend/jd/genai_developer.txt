@@ -1,0 +1,133 @@
+JOB DESCRIPTION: GENERATIVE AI DEVELOPER
+
+Position**POSITION:** Generative AI Developer
+**Department:** Engineering
+**Location:** Remote / Hybrid
+**Employment Type:** Full-time
+**Experience Level:** Mid to Senior (3–7 years)
+
+---
+
+**COMPANY OVERVIEW:**
+We are building the next-generation AI-powered Interview Intelligence Platform—a voice-first assistant that transforms hiring into an engaging, real-time, and bias-free experience. Our mission is to reimagine interviews using cutting-edge generative AI, multimodal understanding, and live conversational intelligence.
+
+---
+
+**JOB SUMMARY:**
+We are seeking a skilled Generative AI Developer to join our engineering team. In this role, you will build the core intelligence behind our real-time voice assistant, including LLM fine-tuning, real-time speech processing, interview intelligence systems, and ethical AI pipelines. You'll work at the intersection of NLP, audio processing, and human-centered design to build smarter, more equitable interviews.
+
+---
+
+**KEY RESPONSIBILITIES:**
+
+1. **Conversational AI Design & Tuning:**
+
+   * Architect goal-oriented dialogue systems tailored to interview contexts
+   * Customize persona-aware LLM behaviors to reflect specific company values
+   * Design fallback strategies and edge-case handling to ensure robustness
+
+2. **Voice Intelligence & Real-Time UX:**
+
+   * Engineer real-time audio interactions with latency below 500ms
+   * Build adaptive voice interfaces with feedback on hesitation, tone, or pauses
+   * Integrate emotion and speaker intent signals into live decision loops
+
+3. **Autonomous Interview Flows:**
+
+   * Create self-navigating interview agents that adjust flow based on candidate history and real-time performance
+   * Design branching question trees and reactivity logic driven by embeddings and real-time context
+
+4. **Model Grounding & Memory:**
+
+   * Implement persistent memory strategies across multi-session interviews
+   * Use RAG pipelines with vector memory to reduce hallucination and increase contextual relevance
+   * Incorporate structured resume and role metadata into prompt construction
+
+5. **Ethical Intelligence & Personalization:**
+
+   * Monitor fairness KPIs (e.g., bias in response tone or score)
+   * Create explainable AI modules for recruiter feedback and audit trails
+   * Apply responsible AI guidelines for multilingual and cross-cultural fairness
+
+6. **Continuous Learning & Optimization:**
+
+   * Build in-session feedback mechanisms to improve model confidence and ranking
+   * Analyze candidate engagement metrics to refine model design
+   * Implement A/B testing and feedback loops for dynamic prompt evolution
+
+---
+
+**REQUIRED SKILLS & EXPERIENCE:**
+
+**Technical Skills:**
+
+* Strong Python and AI/ML libraries (NumPy, Scikit-learn, Pandas)
+* Experience with PyTorch, TensorFlow, or JAX
+* Knowledge of transformer architectures and attention mechanisms
+* Familiarity with REST APIs and microservices
+* Cloud computing and containerization (AWS, GCP, Azure)
+
+**AI/ML Technologies:**
+
+* LLM APIs (OpenAI, Claude, Mistral, Cohere)
+* Hugging Face Transformers, RAG, LangChain
+* Whisper, Riva, or Vosk for speech-to-text
+* TTS tools (Edge TTS, PlayHT, ElevenLabs)
+* Vector stores (FAISS, Weaviate, Pinecone)
+
+**Programming & Tools:**
+
+* Python, Git, Jupyter, Docker, FastAPI
+* ML experimentation tools (Weights & Biases, MLflow)
+* Real-time streaming: WebSockets, LiveKit, or equivalent
+
+**Soft Skills:**
+
+* Analytical and user-centric mindset
+* Clear communication and cross-functional collaboration
+* Agile and self-driven development
+* Passion for ethical, inclusive AI systems
+
+---
+
+**PREFERRED QUALIFICATIONS:**
+
+* Experience in HRTech, recruiting, or interview automation
+* Background in psychology or behavioral science
+* Familiarity with MLOps and model versioning workflows
+* Knowledge of multimodal AI (text + voice + video)
+* Exposure to AI fairness, bias detection, and explainability
+
+---
+
+**EDUCATION:**
+
+* Master’s in Computer Science, Artificial Intelligence, or related field
+* Bachelor’s with strong industry experience in AI/ML will be considered
+* Certifications in Generative AI, LLMOps, or Responsible AI are a plus
+
+---
+
+**BENEFITS:**
+
+* Competitive salary and early equity
+* Remote flexibility with work-from-anywhere options
+* Health, vision, and dental insurance
+* Access to leading AI tools and GPUs
+* Career growth and mentorship from AI leaders
+* Sponsored conference travel and learning budget
+
+---
+
+**WORK ENVIRONMENT:**
+
+* Fast-paced, mission-driven startup
+* AI-first culture with weekly tech talks and demos
+* Collaborative team of engineers, scientists, and designers
+* Real ownership and impact from Day 1
+* Continuous learning with cutting-edge tools
+
+---
+
+**JOIN US**
+This is your chance to build the brain of tomorrow’s hiring—smarter, fairer, and fully voice-native. If you’re passionate about shaping how AI interacts with people in real time, we’d love to hear from you.

@@ -1,0 +1,62 @@
+Generative AI Engineer (Fresher)
+
+Job Title: Generative AI Engineer - Entry Level
+Location: Remote/Hybrid
+Experience: 0-2 years
+Employment Type: Full-time
+
+About the Role:
+We are seeking a passionate and motivated fresher to join our AI team as a Generative AI Engineer. This is an excellent opportunity for recent graduates or individuals with limited experience to work on cutting-edge AI projects and learn from experienced professionals in the field.
+
+Responsibilities:
+- Assist in the development and implementation of generative AI models under supervision
+- Learn and apply machine learning algorithms and techniques
+- Support the team in data preprocessing and model training tasks
+- Participate in code reviews and documentation
+- Collaborate with senior engineers on AI solution integration
+- Contribute to model optimization and performance improvements
+- Stay updated with the latest trends in AI and machine learning
+- Participate in team meetings and knowledge sharing sessions
+
+Requirements:
+- Bachelor's degree in Computer Science, Data Science, Mathematics, or related field
+- Strong academic background in machine learning and statistics
+- Basic understanding of deep learning concepts and neural networks
+- Familiarity with Python programming language
+- Knowledge of data science libraries (NumPy, Pandas, Matplotlib)
+- Basic understanding of machine learning frameworks (TensorFlow or PyTorch)
+- Strong mathematical and analytical thinking
+- Good problem-solving skills and attention to detail
+- Eagerness to learn and adapt to new technologies
+- Strong communication and teamwork skills
+
+Preferred Skills (Not Required):
+- Coursework or projects related to AI/ML
+- Experience with version control systems (Git)
+- Basic understanding of cloud platforms (AWS, GCP, Azure)
+- Knowledge of SQL and database concepts
+- Experience with Jupyter notebooks
+- Understanding of software development best practices
+
+What We Offer:
+- Mentorship from experienced AI engineers
+- Hands-on experience with real-world AI projects
+- Training and certification opportunities
+- Competitive salary and benefits
+- Flexible work environment
+- Career growth opportunities
+
+Learning Opportunities:
+- Work with state-of-the-art generative AI models
+- Learn about LLMs, GANs, VAEs, and other generative models
+- Gain experience with cloud-based ML deployment
+- Develop skills in model optimization and scalability
+- Learn industry best practices and methodologies
+
+Application Process:
+- Submit your resume and cover letter
+- Complete a technical assessment
+- Participate in technical interviews
+- Final round with team leads
+
+We believe in nurturing talent and providing the right environment for freshers to grow into skilled AI professionals. If you are passionate about AI and eager to start your career in this exciting field, we would love to hear from you! 

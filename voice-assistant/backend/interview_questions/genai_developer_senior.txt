@@ -1,0 +1,107 @@
+Easy (1-34)
+1) Define RAG and when to use it.
+2) What is hallucination and how to mitigate?
+3) What are embeddings and vector search?
+4) What is reranking?
+5) What is prompt injection?
+6) What is jailbreak?
+7) What is function calling?
+8) What is chain-of-thought?
+9) What is a safety filter?
+10) What is a system prompt?
+11) What is few-shot prompting?
+12) What are logprobs and why useful?
+13) What is a knowledge cutoff?
+14) What is context window and truncation?
+15) What is streaming inference?
+16) What is batch inference?
+17) What is rate limiting?
+18) What is cost budgeting?
+19) What is eval harness?
+20) What is human-in-the-loop?
+21) What is PEFT/LoRA?
+22) What is KV cache?
+23) What is quantization?
+24) What is distillation?
+25) What is retrieval fusion?
+26) What is BM25?
+27) What is cosine similarity vs dot product?
+28) What is pgvector?
+29) What is hybrid search?
+30) What is text splitter/chunking?
+31) What is schema-guided generation?
+32) What are tool-use contracts?
+33) What is red-teaming?
+34) What is data governance for AI?
+
+Medium (35-67)
+35) Design a domain RAG with metadata filters.
+36) Choose chunking and windowing strategies.
+37) How would you implement reranking with cross-encoders.
+38) How would you add citations and evidence tracking.
+39) How would you build a safety pipeline (toxicity, PII, jailbreak).
+40) How would you implement structured output with JSON schema.
+41) How would you add function calling with validation.
+42) How would you implement chain-of-thought without leaking.
+43) Design evals for factuality and coverage.
+44) How would you add telemetry for quality/cost/latency.
+45) How would you implement semantic caching and invalidation.
+46) Design multi-tenant isolation with guards.
+47) How would you build prompt templates and versioning.
+48) How would you implement A/B testing and canaries for prompts.
+49) Choose models for cost-performance tradeoffs.
+50) How would you implement retries and hedging.
+51) Design system for long context (hierarchical summaries).
+52) How would you build ingestion pipeline with deduplication.
+53) How would you implement vector store using FAISS/pgvector.
+54) Design a redaction pipeline for PII.
+55) How would you build a dashboard for evals and drift.
+56) How would you implement hybrid retrieval (BM25+vector+rereank).
+57) How would you add governance workflow for prompt changes.
+58) How would you implement multi-lingual RAG.
+59) How would you build document QA with semantic search.
+60) Design plugin/tool registry with permissions.
+61) How would you implement streaming to UI with partials.
+62) Choose between open-source vs hosted LLMs.
+63) How would you build cost allocation and chargeback.
+64) How would you implement continuous improvement loop with feedback.
+65) Design a fallback tree across models/features.
+66) Secure model endpoints and secrets.
+67) Plan capacity and autoscaling for spikes.
+
+Hard (68-100)
+68) Architect enterprise RAG with multi-index fusion.
+69) How would you implement query planning and multi-agent workflows.
+70) How would you build memory (episodic/semantic) for assistants.
+71) How would you implement safe tool orchestration with contracts.
+72) How would you build a privacy-first LLM platform.
+73) How would you implement LoRA fine-tuning for a domain.
+74) Design distillation to small models.
+75) How would you implement advanced safety (policy engine, constitutional AI).
+76) How would you build observability at scale with traces.
+77) Design active learning loops.
+78) How would you implement differential privacy.
+79) Design watermarking/provenance strategies.
+80) How would you build multi-region inference with consistency.
+81) How would you implement elastic batching and KV cache sharing.
+82) Design evaluation governance with approvals.
+83) How would you build a secure plugin marketplace.
+84) How would you implement adversarial evals and red-teaming.
+85) Design a vector store at billion-scale.
+86) How would you implement streaming RAG at high throughput.
+87) How would you build a secure tenant isolation model.
+88) How would you implement cost-aware routing and model selection.
+89) Design a feature flag platform for prompts/tools.
+90) How would you implement compliance-ready deletion and retention.
+91) How would you build synthetic data and self-play pipelines.
+92) How would you implement auditor access with strict controls.
+93) Design a robust fallback and degradation plan.
+94) How would you implement governance dashboards for executives.
+95) How would you build capacity planning for LLM workloads.
+96) How would you implement red team/blue team process for AI.
+97) Design a platform for evals-as-code.
+98) How would you implement data flywheels with privacy.
+99) How would you build a north star roadmap for AI platform.
+100) Architect for future multi-modal capabilities.
+
+

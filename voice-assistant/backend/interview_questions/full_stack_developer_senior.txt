@@ -1,0 +1,107 @@
+Easy (1-34)
+1) Define SLOs for a full-stack application.
+2) What is SSR/ISR in Next.js and when to use each?
+3) What is hydration and partial hydration?
+4) What is the difference between REST, gRPC, GraphQL?
+5) What is the CAP theorem and its relevance?
+6) What is eventual consistency and UI implications?
+7) What is an index and when not to use it?
+8) What is CSP and how it protects against XSS?
+9) What is CSRF and mitigations?
+10) What is cookie security (HttpOnly, SameSite)?
+11) What is JWT vs session cookie trade-offs?
+12) What is ETag and caching headers?
+13) What is a monorepo and pros/cons?
+14) What are design tokens?
+15) What is a11y and WCAG?
+16) What is OpenAPI/Swagger?
+17) What is WebSocket vs SSE vs polling?
+18) What is CDN and edge caching?
+19) What is rate limiting strategies?
+20) What is zero-downtime deployment?
+21) What is blue/green vs canary?
+22) What is roll-forward vs rollback?
+23) What is saga pattern?
+24) What is CQRS?
+25) What is idempotency key?
+26) What is data partitioning/sharding?
+27) What is read replica and lag?
+28) What is API gateway?
+29) What is service mesh?
+30) What is RUM vs synthetic monitoring?
+31) What is error budget?
+32) What is feature flag and kill switch?
+33) What is rate limiter token bucket vs leaky bucket?
+34) What is task queue and backpressure?
+
+Medium (35-67)
+35) Architect an end-to-end auth with OAuth/OIDC.
+36) Design a multi-tenant RBAC and permission model.
+37) How would you implement secure cookies and session storage.
+38) Plan database migrations with backward compatibility.
+39) Design an edge caching and revalidation strategy.
+40) How would you design a real-time updates architecture.
+41) How would you implement observability platform (logs, metrics, traces).
+42) Design a defensible CSP with nonces.
+43) How would you implement a plugin system with sandboxing.
+44) How would you build a strongly-typed API client shared in monorepo.
+45) Optimize build pipeline and caching.
+46) How would you implement A/B testing and telemetry.
+47) Plan incident response and runbooks.
+48) Design an audit logging system.
+49) How would you implement SLO-based alerting.
+50) How would you design a schema evolution strategy across services.
+51) How would you build a data export/import pipeline.
+52) How would you implement background jobs and retries.
+53) Design a search infrastructure and UI.
+54) How would you implement privacy-preserving analytics.
+55) How would you build a rate limiting platform.
+56) How would you design a cost-aware autoscaling plan.
+57) How would you implement feature rollout and staged deploys.
+58) Design RSC adoption in an existing app.
+59) How would you build a robust permissions boundary in the backend.
+60) How would you implement a data retention and deletion workflow.
+61) Design a dashboard for SLOs and SLAs.
+62) How would you implement internationalization at scale.
+63) Plan a monolith to microservices migration.
+64) How would you build an experimentation platform.
+65) Design a streaming architecture for dashboards.
+66) How would you implement secure webhooks and request signing.
+67) How would you design a code ownership and governance model.
+
+Hard (68-100)
+68) Architect active-active multi-region end-to-end.
+69) How would you implement global rate limiting and fair scheduling.
+70) Design a zero-trust architecture for internal services.
+71) How would you build a privacy-preserving data lake.
+72) How would you implement differential privacy for analytics.
+73) Architect a resilient plugin marketplace.
+74) How would you build a high-performance data grid component.
+75) How would you implement WebRTC features across stack.
+76) Design a secure secret management and rotation strategy.
+77) How would you build a disaster recovery and chaos testing program.
+78) Plan and execute petabyte-scale backfills.
+79) How would you implement encryption at rest and in transit at scale.
+80) Architect a multi-cloud DR strategy.
+81) How would you build a platform for paved roads and golden paths.
+82) How would you implement a privacy budget framework.
+83) Design SLOs for all critical journeys and enforce.
+84) How would you build a code generation pipeline for clients/servers.
+85) How would you implement server-driven UI and experimentation.
+86) Architect a multi-tenant theming and branding system.
+87) How would you build a governance model for API lifecycle.
+88) How would you implement adaptive concurrency control.
+89) Design a real-time collaborative platform.
+90) How would you build a compliance-ready deletion pipeline.
+91) Architect a centralized authorization policy engine.
+92) How would you implement a platform for automated canary analysis.
+93) How would you build advanced perf monitoring and guardrails.
+94) How would you implement secure data sharing with partners.
+95) Design a platform for schema registry and discovery.
+96) How would you build a high-trust on-call culture and tooling.
+97) How would you implement cost-aware routing and edge compute.
+98) Design a zero-downtime encryption migration.
+99) How would you implement ML-assisted triage and routing.
+100) How would you build a platform vision and north star roadmap.
+
+

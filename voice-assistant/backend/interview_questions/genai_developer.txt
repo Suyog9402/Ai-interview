@@ -1,0 +1,107 @@
+Easy (1-34)
+1) What is a large language model (LLM)?
+2) Difference between pretraining and fine-tuning.
+3) What is tokenization in NLP?
+4) What is a prompt?
+5) What are input and output tokens?
+6) What is temperature in sampling?
+7) What is top-k and top-p (nucleus) sampling?
+8) What is context window?
+9) What is hallucination in LLMs?
+10) What is grounding?
+11) What is retrieval-augmented generation (RAG)?
+12) What is an embedding?
+13) What is cosine similarity?
+14) What is a vector database?
+15) What is few-shot prompting?
+16) What is chain-of-thought?
+17) What is system vs user vs assistant messages?
+18) What is function/tool calling?
+19) What is safety filtering?
+20) What is prompt injection?
+21) What is jailbreak in LLMs?
+22) What is a guardrail?
+23) What is a model endpoint vs open-source model?
+24) What is latency vs throughput for LLMs?
+25) What is streaming responses?
+26) What is batching requests?
+27) What is rate limiting for model APIs?
+28) What is token budgeting?
+29) What are synthetic data and evaluation?
+30) What is a knowledge cutoff?
+31) What is grounding to enterprise data?
+32) What is a vectorizer (embedding model)?
+33) What is eval harness?
+34) What is prompt template?
+
+Medium (35-67)
+35) Design a basic RAG pipeline for FAQs.
+36) Choose chunking strategy and window overlap.
+37) Compare embedding models for domain data.
+38) How would you build retrieval with MMR and filters.
+39) How would you implement citations in generated answers.
+40) How would you add metadata filters in vector search.
+41) How would you implement query rewriting for better retrieval.
+42) Evaluate RAG with precision/recall.
+43) Design prompt templates with variables.
+44) How would you implement tool calling for database queries.
+45) How would you add safety and toxicity filters.
+46) How would you implement system prompts and guardrails.
+47) Cache embeddings and responses.
+48) How would you build reranking stage post retrieval.
+49) How would you implement evaluation with golden sets.
+50) How would you add telemetry for prompts and costs.
+51) Reduce hallucinations with better grounding.
+52) How would you implement multi-turn conversation memory.
+53) Handle long context with map-reduce.
+54) Optimize token usage with summaries.
+55) Choose between open-source vs hosted models.
+56) Secure model endpoints and secrets.
+57) How would you implement rate limiting and backoff.
+58) How would you add A/B testing for prompts.
+59) Use function calling safely with schema.
+60) How would you implement structured outputs with JSON schema.
+61) How would you build an orchestrator (e.g., LangChain/LlamaIndex/hand-rolled).
+62) Monitor quality with human-in-the-loop.
+63) How would you implement hybrid search (BM25 + vectors).
+64) Choose vector DB (FAISS, Chroma, Pinecone, pgvector).
+65) How would you build a knowledge ingestion pipeline.
+66) Design evals for grounding and factuality.
+67) How would you implement content moderation and PII redaction.
+
+Hard (68-100)
+68) Design enterprise-grade RAG with multi-index fusion.
+69) How would you implement query planning and tool orchestration.
+70) How would you build a multi-agent system with roles.
+71) How would you implement retrieval over structured and unstructured data.
+72) Optimize context selection with rewriters and selectors.
+73) How would you build memory architectures (episodic, semantic).
+74) How would you implement function calling with safety contracts.
+75) How would you build streaming UI and server orchestration.
+76) Optimize cost with batch and distillation.
+77) How would you implement fine-tuning with LoRA/PEFT.
+78) How would you build evaluation suite with rubrics and rubrics-weighted scoring.
+79) How would you implement continuous feedback learning loop.
+80) Design privacy-first LLM architecture with data isolation.
+81) How would you implement multi-tenant RAG with guardrails.
+82) How would you build guardrail framework for prompt injection defense.
+83) How would you implement sensitive data detection and masking.
+84) Design a scalable embedding/ingestion pipeline.
+85) How would you implement re-ranking with cross-encoders.
+86) How would you build a tool-use registry with versioning.
+87) How would you implement structured logging and trace spans for LLM calls.
+88) Design observability for quality/cost/latency.
+89) How would you implement decentralized/edge inference strategy.
+90) How would you build hybrid generative search at scale.
+91) How would you implement semantic caching and invalidation.
+92) Design robust evals with adversarial prompts.
+93) How would you implement governance and approvals for prompts.
+94) How would you build model fallback and degradation plans.
+95) How would you implement multi-region serving with consistency.
+96) Design a safety review and red-teaming process.
+97) How would you implement content provenance and watermarking basics.
+98) How would you build a knowledge freshness/update strategy.
+99) How would you implement secure plugins with sandboxing.
+100) Design a platform for prompt/agent lifecycle.
+
+

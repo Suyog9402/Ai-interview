@@ -1,0 +1,73 @@
+Backend Developer (Fresher)
+
+Job Title: Backend Developer - Entry Level
+Location: Remote/Hybrid
+Experience: 0-2 years
+Employment Type: Full-time
+
+About the Role:
+We are looking for a motivated fresher to join our backend development team. This is an excellent opportunity for recent graduates to learn server-side development, work with experienced developers, and contribute to real-world projects while building their skills.
+
+Responsibilities:
+- Learn and assist in developing server-side logic under supervision
+- Support the team in maintaining high performance and responsiveness
+- Help integrate user-facing elements with server-side logic
+- Assist in implementing security and data protection measures
+- Learn to design and implement data storage solutions
+- Participate in code reviews and documentation
+- Collaborate with frontend developers and other team members
+- Contribute to testing and debugging of backend systems
+- Stay updated with latest backend technologies and best practices
+
+Requirements:
+- Bachelor's degree in Computer Science, Software Engineering, or related field
+- Strong academic background in programming fundamentals
+- Basic understanding of server-side programming concepts
+- Familiarity with at least one server-side language (Python, Java, or Node.js)
+- Basic knowledge of database concepts and SQL
+- Understanding of web technologies and HTTP protocols
+- Good problem-solving and analytical thinking skills
+- Eagerness to learn and adapt to new technologies
+- Strong communication and teamwork abilities
+- Attention to detail and code quality
+
+Preferred Skills (Not Required):
+- Coursework or projects involving backend development
+- Basic understanding of RESTful API concepts
+- Familiarity with version control systems (Git)
+- Knowledge of database systems (MySQL, PostgreSQL, MongoDB)
+- Understanding of cloud services (AWS, Azure, GCP)
+- Experience with testing frameworks
+- Knowledge of authentication and authorization concepts
+
+What We Offer:
+- Mentorship from experienced backend developers
+- Hands-on experience with real-world projects
+- Training on modern backend technologies
+- Competitive salary and benefits
+- Flexible work environment
+- Career growth opportunities
+
+Learning Opportunities:
+- Work with modern backend frameworks and tools
+- Learn database design and optimization
+- Gain experience with cloud platforms
+- Develop skills in API design and development
+- Learn security best practices
+- Understand system architecture and scalability
+
+Technical Stack You'll Learn:
+- Server-side languages: Python, Java, Node.js
+- Databases: MySQL, PostgreSQL, MongoDB
+- Cloud platforms: AWS, Azure, GCP
+- Version control: Git
+- API development: RESTful APIs
+- Testing frameworks and tools
+
+Application Process:
+- Submit your resume and cover letter
+- Complete a coding assessment
+- Participate in technical interviews
+- Final round with team leads
+
+We believe in nurturing young talent and providing the right environment for freshers to grow into skilled backend developers. If you are passionate about server-side development and eager to start your career in this field, we would love to hear from you! 

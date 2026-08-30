@@ -1,0 +1,149 @@
+JOB DESCRIPTION: SENIOR FULL STACK DEVELOPER
+
+Position: Senior Full Stack Developer
+Department: Engineering
+Location: Remote/Hybrid
+Employment Type: Full-time
+Experience Level: 5+ years (Senior/Lead Level)
+
+COMPANY OVERVIEW:
+We are building an innovative AI-powered interview assistant platform that revolutionizes the hiring process through intelligent voice interactions, real-time transcription, and comprehensive candidate evaluation.
+
+JOB SUMMARY:
+We are seeking an experienced Senior Full Stack Developer to lead our full stack engineering efforts. You will be responsible for architecting, designing, and implementing both frontend and backend components of our AI interview platform. You'll mentor junior developers, make technical decisions, and ensure the highest code quality and system reliability across the entire technology stack.
+
+KEY RESPONSIBILITIES:
+
+1. Technical Leadership & Architecture:
+   - Lead full stack architecture design and technical decisions
+   - Design scalable frontend and backend architectures
+   - Establish coding standards and best practices across the stack
+   - Make technology stack decisions and evaluations
+   - Plan system scalability and performance optimization
+
+2. Advanced Frontend Development:
+   - Architect and implement complex user interfaces
+   - Design reusable component libraries and design systems
+   - Implement advanced UI patterns and interactions
+   - Optimize frontend performance and user experience
+   - Handle complex state management and data flow
+
+3. Advanced Backend Development:
+   - Architect and implement complex RESTful APIs and GraphQL endpoints
+   - Design advanced database schemas and optimization strategies
+   - Implement advanced authentication and authorization systems
+   - Create comprehensive API documentation and developer guides
+   - Optimize backend performance and response times
+
+4. Full Stack Integration Leadership:
+   - Architect seamless frontend-backend integration
+   - Design efficient data flow and API integration patterns
+   - Implement advanced error handling and validation
+   - Optimize full stack performance and user experience
+   - Handle complex real-time data synchronization
+
+5. Real-time Communication Leadership:
+   - Architect WebRTC solutions for voice/video communication
+   - Design scalable WebSocket and real-time data streaming
+   - Implement advanced audio/video processing pipelines
+   - Optimize real-time communication performance
+   - Handle complex real-time state management
+
+6. AI Integration Leadership:
+   - Lead AI/ML service integration and optimization
+   - Design AI model inference pipelines
+   - Implement advanced data processing for AI models
+   - Optimize AI service performance and reliability
+   - Ensure AI system scalability and monitoring
+
+7. Performance & Scalability Leadership:
+   - Lead full stack performance optimization initiatives
+   - Implement advanced caching and CDN strategies
+   - Design horizontal scaling strategies
+   - Optimize system performance across the entire stack
+   - Implement advanced monitoring and analytics
+
+8. Team Leadership & Mentorship:
+   - Lead and mentor junior full stack developers
+   - Conduct code reviews and technical interviews
+   - Provide technical guidance and architecture decisions
+   - Collaborate with product managers and stakeholders
+   - Drive technical excellence and innovation
+
+REQUIRED SKILLS & EXPERIENCE:
+
+Technical Leadership:
+- 5+ years of experience in full stack development
+- Proven experience leading full stack teams and projects
+- Strong architectural and system design skills
+- Experience with large-scale full stack applications
+- Ability to make critical technical decisions
+
+Advanced Frontend Skills:
+- Expert-level JavaScript/TypeScript programming
+- Deep understanding of React.js and modern patterns
+- Advanced knowledge of modern CSS and styling approaches
+- Expert knowledge of frontend performance optimization
+- Advanced WebRTC and real-time communication expertise
+
+Advanced Backend Skills:
+- Expert-level Python programming and FastAPI development
+- Deep understanding of async programming and asyncio
+- Advanced database design and optimization (PostgreSQL, MongoDB)
+- Expert knowledge of RESTful APIs and GraphQL
+- Advanced WebRTC and real-time communication expertise
+
+Full Stack Architecture:
+- Experience designing scalable full stack architectures
+- Advanced knowledge of frontend-backend integration
+- Experience with microservices and distributed systems
+- Advanced knowledge of performance optimization across the stack
+- Experience with cloud-native architectures
+
+DevOps & Infrastructure:
+- Advanced Docker and Kubernetes expertise
+- Experience with cloud platforms (AWS, GCP, Azure)
+- Advanced CI/CD pipeline design and implementation
+- Experience with infrastructure as code (Terraform, CloudFormation)
+- Advanced monitoring and observability implementation
+
+Leadership Skills:
+- Strong technical leadership and decision-making abilities
+- Excellent communication and stakeholder management
+- Experience mentoring and developing junior developers
+- Ability to drive technical excellence and innovation
+- Strong problem-solving and analytical thinking
+
+PREFERRED QUALIFICATIONS:
+- Experience with WebRTC and real-time communication
+- Advanced knowledge of AI/ML integration and APIs
+- Experience with speech recognition and audio processing
+- Advanced knowledge of microservices architecture
+- Experience with serverless and edge computing
+- Advanced knowledge of GraphQL and schema design
+- Experience with real-time data streaming
+- Advanced knowledge of security best practices and compliance
+
+EDUCATION:
+- Bachelor's degree in Computer Science, Software Engineering, or related field
+- Master's degree preferred
+- Relevant certifications in full stack technologies
+
+BENEFITS:
+- Competitive senior-level salary and equity package
+- Health, dental, and vision insurance
+- Flexible work hours and remote work options
+- Professional development and conference opportunities
+- Modern development tools and equipment
+- Leadership and career growth opportunities
+- Collaborative and innovative work environment
+
+WORK ENVIRONMENT:
+- Fast-paced startup environment with technical leadership opportunities
+- Opportunity to work with cutting-edge full stack technologies
+- Lead technical initiatives and mentor team members
+- Regular technical conferences and workshops
+- Continuous learning and skill development
+- Impact on product architecture and technical direction
+
+This role offers an exciting opportunity to lead full stack technical initiatives in a groundbreaking AI-powered platform that's transforming the hiring industry. You'll have the chance to architect scalable solutions across the entire technology stack, mentor talented developers, and make significant technical decisions that impact the product's success. 

@@ -1,0 +1,143 @@
+JOB DESCRIPTION: FULL STACK DEVELOPER
+
+Position: Full Stack Developer
+Department: Engineering
+Location: Remote/Hybrid
+Employment Type: Full-time
+Experience Level: Mid to Senior (3-7 years)
+
+COMPANY OVERVIEW:
+We are building an innovative AI-powered interview assistant platform that revolutionizes the hiring process through intelligent voice interactions, real-time transcription, and comprehensive candidate evaluation.
+
+JOB SUMMARY:
+We are seeking a versatile Full Stack Developer to join our engineering team. You will be responsible for developing both frontend and backend components of our AI interview platform, working across the entire technology stack. You'll have the opportunity to work with modern technologies including React, FastAPI, WebRTC, and AI integrations.
+
+KEY RESPONSIBILITIES:
+
+1. Full Stack Development:
+   - Develop both frontend and backend components of the application
+   - Create responsive and intuitive user interfaces using React/Next.js
+   - Build robust backend APIs using FastAPI and Python
+   - Implement real-time communication features with WebRTC
+
+2. Frontend Development:
+   - Build modern, responsive user interfaces with React and TypeScript
+   - Implement real-time features for voice/video communication
+   - Create interactive interview interfaces and dashboards
+   - Ensure cross-browser compatibility and mobile responsiveness
+   - Implement state management and data flow optimization
+
+3. Backend Development:
+   - Design and implement RESTful APIs and GraphQL endpoints
+   - Develop database schemas and optimize query performance
+   - Implement authentication and authorization systems
+   - Create real-time communication services with WebSockets
+   - Integrate with AI/ML services and third-party APIs
+
+4. Real-time Communication:
+   - Implement WebRTC for voice/video communication
+   - Handle real-time transcription and audio processing
+   - Manage WebSocket connections for live data streaming
+   - Create real-time chat and messaging features
+   - Implement audio/video device management
+
+5. Database & Data Management:
+   - Design and optimize database schemas (PostgreSQL, MongoDB)
+   - Implement efficient data queries and caching strategies
+   - Handle data migration and versioning
+   - Create data analytics and reporting features
+   - Ensure data security and privacy compliance
+
+6. AI Integration & Processing:
+   - Integrate with AI/ML services for interview analysis
+   - Process and store interview transcripts and evaluations
+   - Implement real-time AI model inference
+   - Handle speech-to-text and text-to-speech conversions
+   - Create intelligent interview question generation
+
+7. Performance & Scalability:
+   - Optimize application performance across the full stack
+   - Implement caching strategies and CDN optimization
+   - Handle horizontal scaling and load balancing
+   - Monitor and improve application performance
+   - Implement automated testing and deployment pipelines
+
+8. DevOps & Deployment:
+   - Work with Docker containers and container orchestration
+   - Implement CI/CD pipelines for automated deployment
+   - Manage cloud infrastructure and services
+   - Monitor application health and performance
+   - Handle production deployments and rollbacks
+
+REQUIRED SKILLS & EXPERIENCE:
+
+Frontend Skills:
+- Strong proficiency in JavaScript/TypeScript
+- Experience with React.js and modern React patterns
+- Knowledge of Next.js or similar full-stack frameworks
+- Understanding of HTML5, CSS3, and responsive design
+- Experience with state management (Redux, Zustand, Context API)
+- Knowledge of WebRTC and real-time communication APIs
+
+Backend Skills:
+- Strong proficiency in Python (3.8+)
+- Experience with FastAPI, Django, or Flask frameworks
+- Knowledge of async programming and asyncio
+- Understanding of RESTful API design principles
+- Experience with PostgreSQL, MongoDB, or similar databases
+- Knowledge of WebSocket protocols and implementation
+
+Full Stack Technologies:
+- Modern build tools (Webpack, Vite, esbuild)
+- Package managers (npm, yarn, pip, poetry)
+- Version control with Git and collaborative development
+- Testing frameworks (Jest, React Testing Library, pytest)
+- API testing tools (Postman, Insomnia)
+- Performance monitoring and optimization tools
+
+Development Tools:
+- Docker containers and containerization
+- Cloud platforms (AWS, GCP, Azure)
+- CI/CD pipelines and automated testing
+- Monitoring and logging solutions
+- Database design and optimization tools
+- Code quality tools (ESLint, Prettier, Black)
+
+Soft Skills:
+- Strong problem-solving and analytical thinking
+- Excellent communication and collaboration skills
+- Ability to work in an agile development environment
+- Self-motivated and able to work independently
+- Attention to detail and code quality
+- Ability to mentor junior developers
+
+PREFERRED QUALIFICATIONS:
+- Experience with WebRTC and real-time communication
+- Knowledge of AI/ML integration and APIs
+- Experience with speech recognition and audio processing
+- Understanding of microservices architecture
+- Experience with serverless architectures
+- Knowledge of GraphQL and schema design
+- Experience with real-time data streaming
+- Understanding of security best practices and compliance
+
+EDUCATION:
+- Bachelor's degree in Computer Science, Software Engineering, or related field
+- Equivalent work experience will be considered
+
+BENEFITS:
+- Competitive salary and equity package
+- Health, dental, and vision insurance
+- Flexible work hours and remote work options
+- Professional development and learning opportunities
+- Modern development tools and equipment
+- Collaborative and innovative work environment
+
+WORK ENVIRONMENT:
+- Fast-paced startup environment
+- Opportunity to work with cutting-edge technologies
+- Collaborative team with experienced engineers
+- Regular hackathons and innovation days
+- Continuous learning and skill development
+
+This role offers an exciting opportunity to work on a groundbreaking AI-powered platform that's transforming the hiring industry. You'll have the chance to work across the entire technology stack and make a significant impact on both the user experience and technical architecture of our platform. 

@@ -1,0 +1,107 @@
+Easy (1-34)
+1) Define Core Web Vitals and why they matter.
+2) What is SSR vs SSG vs ISR in Next.js?
+3) What is hydration and partial hydration?
+4) What is reconciliation in React?
+5) What is React Server Component?
+6) What are Suspense and useTransition?
+7) What is accessibility and ARIA roles?
+8) What is CSP and why use it?
+9) What is XSS and how to prevent it?
+10) What is CSRF and mitigation strategies?
+11) What are design tokens?
+12) What is tree-shaking and dead code elimination?
+13) What is code splitting?
+14) What is a bundle analyzer?
+15) What is module federation?
+16) What is micro-frontend?
+17) What is SSR streaming?
+18) What is a service worker?
+19) What is IndexedDB?
+20) What is WebSocket vs SSE?
+21) What is WebRTC?
+22) What is offscreen canvas?
+23) What is WebAssembly and when to use it?
+24) What are source maps?
+25) What is monorepo for frontend?
+26) What is snapshot testing?
+27) What is visual regression testing?
+28) What is i18n and l10n?
+29) What is PWA?
+30) What is CSP strict-dynamic?
+31) What is SRI (Subresource Integrity)?
+32) What is a11y contrast ratio?
+33) What is render blocking resource?
+34) What is priority hints?
+
+Medium (35-67)
+35) Architect a Next.js app for large teams.
+36) Design a design system with tokens and theming.
+37) How would you implement RSC with streaming for a dashboard.
+38) How would you build a data fetching layer with React Query.
+39) Design auth flows with OAuth/OIDC securely.
+40) How would you implement fine-grained access control in UI.
+41) Optimize images, fonts, and third-party scripts.
+42) How would you design a localization system with dynamic routing.
+43) How would you implement complex forms with RHF and Zod.
+44) How would you build perf budgets and CI checks.
+45) How would you implement CSP with nonces and hashes.
+46) How would you design a micro-frontend integration plan.
+47) Architect a component library with stories and tests.
+48) How would you implement a plug-in architecture for widgets.
+49) How would you build a resilient WebSocket client.
+50) How would you implement streaming updates with Suspense.
+51) How would you build an offline sync strategy with background sync.
+52) How would you design a telemetry and error tracking pipeline.
+53) Design a real-time collaboration feature.
+54) How would you implement a11y testing in CI.
+55) How would you design a layout system with CSS Grid.
+56) Optimize interaction-to-next-paint (INP).
+57) Design bundle splitting and prefetching.
+58) How would you implement feature flags with remote config.
+59) How would you design scalable routing conventions.
+60) How would you build a secure file upload pipeline.
+61) Architect an addon system for third parties.
+62) Design testing strategy across unit/int/e2e.
+63) How would you implement state mgmt with Redux Toolkit at scale.
+64) How would you design a visual regression pipeline.
+65) How would you implement an asset pipeline for large apps.
+66) Architect a shared UI platform in a monorepo.
+67) Plan a migration to RSC in an existing app.
+
+Hard (68-100)
+68) Design micro-frontends for independent deploy with module federation.
+69) How would you build a real-time collaborative editor with CRDT.
+70) Architect a large-scale component library with tokens.
+71) How would you implement a custom rendering engine with WebGL.
+72) How would you build an offline-first PWA with conflict resolution.
+73) Design a secure OAuth/OIDC with PKCE and CSP.
+74) How would you implement WASM for performance-critical processing.
+75) Architect a multi-tenant theming engine.
+76) Design RUM analytics with privacy controls.
+77) How would you build lazy hydration and partial RSC.
+78) Design a streaming dashboard with selective revalidation.
+79) How would you implement a sandboxed plugin runtime.
+80) How would you design a stable API surface for a UI platform.
+81) How would you build a highly optimized data grid.
+82) Design robust error boundaries and recovery.
+83) How would you implement an animation system with worklets.
+84) Architect a CSP-first security posture.
+85) Design a global state graph and scheduling.
+86) How would you build a testing harness for cross-browser CI.
+87) How would you implement a compatibility layer for legacy apps.
+88) Design a highly-configurable routing system.
+89) How would you build a devtools extension for performance tracing.
+90) How would you implement prefetching with ML-based heuristics.
+91) How would you build a distributed design tokens system.
+92) Architect a UI experimentation platform.
+93) How would you implement a secure iframe embed strategy.
+94) How would you build a visual diffing tool for components.
+95) Architect a frontend platform roadmap and governance.
+96) Design a telemetry sampling strategy.
+97) How would you implement perf isolation in micro-frontends.
+98) How would you build a content pipeline with sanitization.
+99) Design a recovery strategy for hydration failures.
+100) Plan adoption of new React features at scale.
+
+

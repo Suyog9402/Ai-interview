@@ -1,0 +1,107 @@
+Easy (1-34)
+1) What is the DOM?
+2) Difference between HTML and JSX.
+3) What are semantic HTML elements?
+4) What is CSS specificity?
+5) What is Flexbox used for?
+6) What is the box model?
+7) Difference between block and inline elements.
+8) What is responsive design?
+9) What is hydration in Next.js?
+10) What are React props?
+11) What is React state?
+12) What is a controlled input?
+13) What is an event handler?
+14) What are keys in React lists?
+15) What is a hook? Name some built-ins.
+16) What is a component?
+17) What is client vs server component (Next.js)?
+18) What is a route in Next.js app router?
+19) What is CSS-in-JS?
+20) What is a bundler?
+21) What is tree-shaking?
+22) What is an API call from the browser?
+23) What are HTTP cookies?
+24) What is localStorage vs sessionStorage?
+25) What is debounce vs throttle?
+26) What is accessibility (a11y)?
+27) What is Lighthouse?
+28) What is Cross-Origin Resource Sharing (CORS)?
+29) What is CSR vs SSR vs SSG?
+30) What is hydration error?
+31) What is React reconciliation?
+32) What is a CSS module?
+33) What is a design system?
+34) What is a unit test for a component?
+
+Medium (35-67)
+35) Optimize rendering in React using memo and useMemo.
+36) How would you implement a custom hook for data fetching.
+37) Manage global state: Context vs Redux vs Zustand.
+38) How would you implement client-side routing with Next.js.
+39) Handle forms and validation in React.
+40) How would you implement error boundaries.
+41) Optimize images in Next.js.
+42) How would you implement infinite scrolling with IntersectionObserver.
+43) Handle authentication flows on the frontend.
+44) Securely store and send auth tokens.
+45) How would you implement optimistic UI updates.
+46) Debounce a search input and cancel requests.
+47) How would you implement drag-and-drop UI.
+48) How would you configure ESLint and Prettier for a project.
+49) How would you approach writing tests with React Testing Library.
+50) Use Suspense for data fetching.
+51) How would you implement dark mode with prefers-color-scheme.
+52) How would you build responsive layout with CSS Grid.
+53) How would you design accessible modals and dialogs.
+54) How would you implement file uploads with progress.
+55) Use WebSockets for real-time updates.
+56) Integrate with a streaming API.
+57) Diagnose performance with React Profiler.
+58) Prevent layout shift (CLS) issues.
+59) How would you implement internationalization (i18n).
+60) Handle time zones and date formatting.
+61) Avoid XSS and sanitize HTML.
+62) How would you implement content security policy (CSP).
+63) Manage feature flags on the client.
+64) Structure a large component library.
+65) How would you implement design tokens.
+66) How would you build a data grid with virtualization.
+67) How would you implement client-side caching strategies.
+
+Hard (68-100)
+68) Architect a micro-frontend strategy.
+69) How would you build an offline-first PWA with background sync.
+70) How would you implement end-to-end encryption for chat.
+71) Optimize bundle splitting at scale.
+72) Design a scalable theming system.
+73) How would you build a collaborative real-time editor.
+74) How would you implement WebRTC-based video calling UI.
+75) How would you build accessible complex widgets (combobox, treeview).
+76) How would you implement SSR streaming and partial hydration.
+77) How would you build a metrics dashboard with Web Vitals.
+78) How would you implement advanced caching with Service Workers.
+79) Optimize React Server Components usage.
+80) How would you build a design system with storybook and CI.
+81) How would you implement secure OAuth2/OIDC frontend flow.
+82) How would you design a plugin architecture for widgets.
+83) How would you build a large-scale routing strategy with code-splitting.
+84) How would you implement advanced a11y testing and linting.
+85) How would you build a WASM-powered visualization.
+86) Optimize rendering scheduling with scheduler APIs.
+87) How would you implement in-browser ML inference efficiently.
+88) How would you build a resilient offline data sync engine.
+89) How would you design a custom rendering engine experiment.
+90) How would you implement real-time presence and cursors.
+91) How would you build a cross-platform UI with React Native Web.
+92) How would you implement CSP with strict-dynamic and nonces.
+93) Architect a UI performance budget and guardrails.
+94) How would you build a hook library with impeccable DX.
+95) How would you implement feature flag SDK with remote config.
+96) Architect theming with CSS variables at scale.
+97) How would you implement anti-flicker for personalization.
+98) How would you build a defensive UI against hostile embeds.
+99) Design a large monorepo for frontend platform.
+100) How would you build automated visual regression testing pipeline.
+
+

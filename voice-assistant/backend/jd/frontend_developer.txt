@@ -1,0 +1,129 @@
+JOB DESCRIPTION: FRONTEND DEVELOPER
+
+Position: Frontend Developer
+Department: Engineering
+Location: Remote/Hybrid
+Employment Type: Full-time
+Experience Level: Mid to Senior (3-7 years)
+
+COMPANY OVERVIEW:
+We are building an innovative AI-powered interview assistant platform that revolutionizes the hiring process through intelligent voice interactions, real-time transcription, and comprehensive candidate evaluation.
+
+JOB SUMMARY:
+We are seeking a talented Frontend Developer to join our engineering team. You will be responsible for creating intuitive, responsive, and high-performance user interfaces for our AI interview platform. You'll work with modern frontend technologies including React, TypeScript, and real-time communication features.
+
+KEY RESPONSIBILITIES:
+
+1. User Interface Development:
+   - Build responsive and accessible user interfaces using React/Next.js
+   - Implement modern UI/UX designs with attention to detail
+   - Create reusable component libraries and design systems
+   - Ensure cross-browser compatibility and mobile responsiveness
+
+2. Real-time Communication Features:
+   - Implement WebRTC-based voice/video communication interfaces
+   - Create real-time chat and messaging components
+   - Handle live transcription display and synchronization
+   - Manage audio/video device selection and controls
+
+3. State Management & Data Flow:
+   - Implement efficient state management using Redux, Zustand, or Context API
+   - Handle complex data flows and API integrations
+   - Manage real-time data updates and synchronization
+   - Implement optimistic updates and error handling
+
+4. Performance Optimization:
+   - Optimize application performance and loading times
+   - Implement code splitting and lazy loading strategies
+   - Optimize bundle sizes and reduce unnecessary re-renders
+   - Monitor and improve Core Web Vitals
+
+5. Authentication & User Experience:
+   - Implement user authentication flows and protected routes
+   - Create seamless onboarding and user registration experiences
+   - Handle form validation and error messaging
+   - Implement progressive web app features
+
+6. Interview Platform Features:
+   - Build interview scheduling and management interfaces
+   - Create candidate evaluation and scoring displays
+   - Implement real-time interview progress tracking
+   - Design dashboard and analytics visualizations
+
+7. Testing & Quality Assurance:
+   - Write comprehensive unit and integration tests
+   - Implement end-to-end testing with Cypress or Playwright
+   - Perform cross-browser and device testing
+   - Conduct accessibility testing and compliance
+
+8. Collaboration & Code Quality:
+   - Work closely with designers and backend developers
+   - Participate in code reviews and maintain code quality
+   - Document components and APIs
+   - Mentor junior developers and share knowledge
+
+REQUIRED SKILLS & EXPERIENCE:
+
+Technical Skills:
+- Strong proficiency in JavaScript/TypeScript
+- Experience with React.js and modern React patterns (Hooks, Context)
+- Knowledge of Next.js or similar full-stack frameworks
+- Understanding of HTML5, CSS3, and modern CSS features
+- Experience with responsive design and mobile-first development
+- Knowledge of WebRTC and real-time communication APIs
+- Understanding of RESTful APIs and GraphQL
+- Experience with modern build tools (Webpack, Vite, esbuild)
+
+Frontend Technologies:
+- CSS preprocessors (Sass, Less) or CSS-in-JS solutions
+- State management libraries (Redux, Zustand, Context API)
+- UI component libraries (Material-UI, Ant Design, Chakra UI)
+- Form handling libraries (React Hook Form, Formik)
+- Testing frameworks (Jest, React Testing Library, Cypress)
+- Package managers (npm, yarn, pnpm)
+
+Development Tools:
+- Git version control and collaborative development
+- Modern development tools (ESLint, Prettier, TypeScript)
+- Browser developer tools and debugging
+- Performance monitoring and optimization tools
+- Design tools (Figma, Sketch) collaboration
+
+Soft Skills:
+- Strong problem-solving and analytical thinking
+- Excellent communication and collaboration skills
+- Attention to detail and user experience focus
+- Ability to work in an agile development environment
+- Self-motivated and able to work independently
+- Creative thinking and design sensibility
+
+PREFERRED QUALIFICATIONS:
+- Experience with WebRTC and real-time communication
+- Knowledge of WebSocket and Server-Sent Events
+- Experience with audio/video processing in the browser
+- Understanding of accessibility standards (WCAG 2.1)
+- Experience with Progressive Web Apps (PWA)
+- Knowledge of performance optimization techniques
+- Experience with animation libraries (Framer Motion, GSAP)
+- Understanding of SEO and web analytics
+
+EDUCATION:
+- Bachelor's degree in Computer Science, Web Development, or related field
+- Equivalent work experience will be considered
+
+BENEFITS:
+- Competitive salary and equity package
+- Health, dental, and vision insurance
+- Flexible work hours and remote work options
+- Professional development and learning opportunities
+- Modern development tools and equipment
+- Collaborative and innovative work environment
+
+WORK ENVIRONMENT:
+- Fast-paced startup environment
+- Opportunity to work with cutting-edge frontend technologies
+- Collaborative team with experienced designers and developers
+- Regular hackathons and innovation days
+- Continuous learning and skill development
+
+This role offers an exciting opportunity to work on a groundbreaking AI-powered platform that's transforming the hiring industry. You'll have the chance to create intuitive user experiences that make AI-powered interviews accessible and effective for users worldwide. 

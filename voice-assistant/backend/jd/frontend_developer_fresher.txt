@@ -1,0 +1,74 @@
+Frontend Developer (Fresher)
+
+Job Title: Frontend Developer - Entry Level
+Location: Remote/Hybrid
+Experience: 0-2 years
+Employment Type: Full-time
+
+About the Role:
+We are seeking a passionate fresher to join our frontend development team. This is an excellent opportunity for recent graduates to learn modern web development, work with experienced developers, and create beautiful, responsive user interfaces while building their skills.
+
+Responsibilities:
+- Learn and assist in developing user-facing features under supervision
+- Help build reusable code and libraries for future use
+- Support the team in ensuring technical feasibility of UI/UX designs
+- Assist in optimizing applications for maximum speed and scalability
+- Collaborate with backend developers and other team members
+- Participate in code reviews and documentation
+- Learn to implement responsive design principles
+- Contribute to testing and debugging of frontend applications
+- Stay updated with latest frontend technologies and best practices
+
+Requirements:
+- Bachelor's degree in Computer Science, Web Development, or related field
+- Strong academic background in web technologies
+- Basic understanding of frontend development concepts
+- Familiarity with HTML5, CSS3, and JavaScript
+- Understanding of responsive design principles
+- Basic knowledge of web accessibility standards
+- Good problem-solving and creative thinking skills
+- Eagerness to learn and adapt to new technologies
+- Strong attention to detail and design sensibility
+- Good communication and teamwork abilities
+
+Preferred Skills (Not Required):
+- Coursework or projects involving frontend development
+- Basic understanding of JavaScript frameworks (React, Angular, Vue)
+- Familiarity with CSS pre-processors (SASS, LESS)
+- Knowledge of version control systems (Git)
+- Understanding of browser developer tools
+- Experience with responsive design frameworks
+- Basic knowledge of web performance optimization
+
+What We Offer:
+- Mentorship from experienced frontend developers
+- Hands-on experience with real-world projects
+- Training on modern frontend technologies
+- Competitive salary and benefits
+- Flexible work environment
+- Career growth opportunities
+
+Learning Opportunities:
+- Work with modern JavaScript frameworks
+- Learn responsive design and mobile-first development
+- Gain experience with build tools and bundlers
+- Develop skills in UI/UX implementation
+- Learn web performance optimization
+- Understand cross-browser compatibility
+
+Technical Stack You'll Learn:
+- HTML5, CSS3, JavaScript (ES6+)
+- React.js, Angular, or Vue.js
+- CSS pre-processors: SASS, LESS
+- Build tools: Webpack, Gulp, Vite
+- Version control: Git
+- Testing frameworks: Jest, Cypress
+- UI libraries and frameworks
+
+Application Process:
+- Submit your resume and cover letter
+- Complete a frontend coding assessment
+- Participate in technical interviews
+- Final round with team leads
+
+We believe in nurturing young talent and providing the right environment for freshers to grow into skilled frontend developers. If you are passionate about creating beautiful user experiences and eager to start your career in web development, we would love to hear from you! 

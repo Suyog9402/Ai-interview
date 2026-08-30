@@ -1,0 +1,107 @@
+Easy (1-34)
+1) What is an API and why is it used?
+2) Compare monoliths and microservices at a high level.
+3) What is REST? Name its main constraints.
+4) What is the purpose of HTTP status codes?
+5) Explain the difference between PUT and PATCH.
+6) What is idempotency? Give an example.
+7) What is a database index and why is it useful?
+8) Difference between SQL and NoSQL databases.
+9) What is a primary key?
+10) What is a foreign key?
+11) Explain ACID properties briefly.
+12) What is a connection pool?
+13) What is ORM? Why use it?
+14) What is caching? When would you use it?
+15) Name a few common HTTP methods and their purposes.
+16) What is rate limiting?
+17) What is JWT? What problem does it solve?
+18) What is basic authentication vs bearer tokens?
+19) What is environment configuration and why is it important?
+20) What is a 12-factor app?
+21) What is pagination? Why is it needed?
+22) What is the difference between synchronous and asynchronous processing?
+23) What is logging and why is it important?
+24) What is a message queue?
+25) Explain what latency and throughput mean.
+26) What is load balancing?
+27) What is a health check endpoint?
+28) What is containerization? Name a tool.
+29) What is CI/CD at a high level?
+30) What is input validation and why is it necessary?
+31) What is Cross-Origin Resource Sharing (CORS)?
+32) What is the purpose of API documentation (e.g., OpenAPI/Swagger)?
+33) What is the difference between unit and integration tests?
+34) What is a migration in the context of databases?
+
+Medium (35-67)
+35) Design a REST endpoint for listing resources with filters and pagination.
+36) Explain how you would structure a service layer in a web API.
+37) How do you handle database migrations safely in production?
+38) Discuss trade-offs between denormalization and normalization.
+39) How do you debug slow database queries?
+40) Explain optimistic vs pessimistic locking with examples.
+41) How do you avoid N+1 query problems with an ORM?
+42) What are common caching strategies (e.g., TTL, cache-aside)?
+43) How do you invalidate caches correctly?
+44) How do you design idempotent endpoints?
+45) Explain the difference between at-least-once and exactly-once processing.
+46) How would you implement file uploads securely?
+47) How do you protect APIs using JWTs and refresh tokens?
+48) How do you store secrets securely in development and production?
+49) Explain structured logging and correlation IDs.
+50) How do you implement background jobs for long-running tasks?
+51) Describe a retry strategy with exponential backoff.
+52) How do you secure a public REST API against common attacks?
+53) What is the OWASP Top 10 relevance for backend APIs?
+54) How do you design a robust error-handling strategy for APIs?
+55) How do you version APIs? What are pros/cons of each approach?
+56) How do you set up health checks and readiness/liveness probes?
+57) What is circuit breaker pattern? When to apply it?
+58) Describe a clean folder/module structure for a backend project.
+59) How would you implement rate limiting per user/IP?
+60) How do you detect and prevent SQL injection?
+61) How do you implement role-based access control (RBAC)?
+62) How do you ensure idempotency across distributed systems?
+63) Explain eventual consistency and when it is acceptable.
+64) How do you design a search feature over relational data?
+65) How do you perform schema validation for incoming requests?
+66) How do you monitor performance in production (APM, metrics)?
+67) How do you implement graceful shutdown of services?
+
+Hard (68-100)
+68) Design a scalable architecture for a high-traffic API (100k RPS).
+69) Compare microservices vs modular monolith in terms of operations.
+70) How to design a multi-tenant data model? Trade-offs?
+71) How do you choose between SQL and NoSQL for a complex domain?
+72) Deep dive on distributed transactions and Saga pattern.
+73) How to ensure data integrity in event-driven systems?
+74) How to design API gateways and service meshes in a microservices setup?
+75) How to perform zero-downtime deployments with DB changes?
+76) Strategies for blue/green and canary releases.
+77) Design a rate limiter for a globally distributed system.
+78) How would you implement consistent hashing for cache sharding?
+79) How to do backfill/migration of terabyte-scale data safely?
+80) How to design idempotent workflows across multiple services?
+81) How to detect and mitigate thundering herd problems?
+82) Deep dive into connection pooling and tuning under load.
+83) Design a robust feature flag system for backend services.
+84) How to ensure PII compliance (GDPR/CPRA) in data storage?
+85) Design a secure secrets management strategy at scale.
+86) How to design an audit logging system with tamper resistance?
+87) How to implement search with indexing (e.g., Elasticsearch) at scale?
+88) Design a multi-region active-active architecture.
+89) How to plan capacity and autoscaling for spiky workloads?
+90) How to do performance testing and SLO/SLA design?
+91) Design a high-throughput event ingestion pipeline.
+92) How to implement CQRS and when is it worth it?
+93) Deep dive on gRPC vs REST trade-offs and adoption path.
+94) How to implement API monetization and quota management?
+95) Disaster recovery planning for critical backend services.
+96) How to design a privacy-preserving analytics pipeline?
+97) Detecting and mitigating insider threats at the backend layer.
+98) Architecture review: avoiding tight coupling across services.
+99) Building a developer platform for internal backend teams.
+100) Designing observability (logs, metrics, traces) as a product.
+
+

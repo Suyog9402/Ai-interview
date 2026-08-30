@@ -1,0 +1,107 @@
+Easy (1-34)
+1) Define service-level objectives (SLOs) for an API.
+2) What are the key REST constraints and why they matter?
+3) What is backwards compatibility in APIs?
+4) Explain the CAP theorem briefly.
+5) What is eventual consistency?
+6) What is a database index and its trade-offs?
+7) What is connection pooling? Tuning basics.
+8) What is the difference between PUT, PATCH, and POST semantics?
+9) What is OAuth2 vs JWT?
+10) What is zero-downtime deployment?
+11) What is blue/green vs canary?
+12) What is circuit breaker and why use it?
+13) What is an API gateway role?
+14) What is schema versioning in APIs?
+15) What is PII and data classification?
+16) What are CQRS basics?
+17) What is an idempotency key?
+18) What is a dead letter queue?
+19) What is replay protection for webhooks?
+20) What is HPA (Horizontal Pod Autoscaler)?
+21) What is tracing (spans, traces)?
+22) What is rate limiting (token bucket)?
+23) What is API monetization/quota mgmt?
+24) What is GDPR/CPRA at a glance?
+25) What is RBAC vs ABAC?
+26) What is KMS and envelope encryption?
+27) What is secrets rotation?
+28) What is data retention policy?
+29) What is a service mesh?
+30) What is gRPC and when to use it?
+31) What is a sidecar pattern?
+32) What is a canary analysis?
+33) What is a runbook and on-call playbook?
+34) What is synthetic monitoring?
+
+Medium (35-67)
+35) Design API versioning strategy for a public API.
+36) Plan a schema migration with rolling deploys.
+37) Design a multi-tenant RBAC model.
+38) Tune connection pools for bursty workloads.
+39) Design a cache invalidation strategy for product listings.
+40) How would you implement idempotent payment processing.
+41) Design webhook delivery with retries and signatures.
+42) How would you set up observability: logs, metrics, traces with SLOs.
+43) How would you design a data retention and deletion pipeline.
+44) Design a GDPR-compliant data export.
+45) Choose between REST/GraphQL/gRPC for an internal service.
+46) How would you implement circuit breaker and request hedging.
+47) Migrate a table with 1B rows without downtime.
+48) Prevent hot partitions and ensure even sharding.
+49) Design a feature flag rollout plan.
+50) How would you set up canary deploys with automated rollback.
+51) Design a search index schema and ingestion pipeline.
+52) Handle out-of-order events in event-sourcing.
+53) Design a rate limiter for per-user and per-org limits.
+54) How would you build a consistent error taxonomy for APIs.
+55) How would you implement robust retries with deduplication.
+56) How would you build a secure secret management flow.
+57) Design a schema evolution strategy for protobufs.
+58) Plan data archiving and cold storage.
+59) Design workflows with saga orchestration.
+60) How would you build a strong authn/authz boundary in microservices.
+61) How would you design high-fidelity synthetic tests for SLAs.
+62) Design an access audit trail system.
+63) Choose read-replicas vs caching for read scaling.
+64) Plan capacity for Black Friday-level traffic.
+65) Optimize ORM usage for complex joins.
+66) Design a privacy-preserving analytics pipeline.
+67) How would you build a safe rollout for encryption-at-rest migration.
+
+Hard (68-100)
+68) Design an active-active multi-region architecture.
+69) How would you build a resilient global rate limiter.
+70) Architect a zero-trust service-to-service network.
+71) Design a multi-cloud DR strategy.
+72) How would you implement strongly consistent distributed counters.
+73) How would you build a real-time stream processing pipeline (exactly-once).
+74) Design a massive backfill with minimal impact.
+75) How would you build a multi-tenant isolation strategy at scale.
+76) Design request prioritization and fairness.
+77) Architect a high-throughput event bus (Kafka) setup.
+78) How would you implement schema-on-write vs schema-on-read trade-offs.
+79) How would you build a robust data de-identification system.
+80) Design automated PII discovery and tagging.
+81) Architect audit logs with tamper evidence.
+82) Design a cross-region feature flag distribution system.
+83) How would you implement disaster recovery drills and game days.
+84) How would you build canary analysis with statistical confidence.
+85) Design an adaptive concurrency control system.
+86) How would you implement hot-patching strategy for services.
+87) How would you build a governance model for API lifecycle.
+88) Architect a compliance-ready deletion pipeline.
+89) How would you implement continuous config delivery with safety.
+90) How would you build auto-tuning connection pools.
+91) How would you implement multi-layer caching (CDN, app, DB).
+92) Design adaptive rate limiting with ML signals.
+93) How would you build a privacy budget system (differential privacy basics).
+94) Design a scalable schema registry.
+95) How would you implement cost-aware service architectures.
+96) Design production incident classification and RCA.
+97) How would you build chaos engineering experiments for APIs.
+98) Architect a marketplace webhooks platform.
+99) How would you implement secure data sharing between tenants.
+100) How would you build a platform for golden paths and paved roads.
+
+

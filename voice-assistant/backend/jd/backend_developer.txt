@@ -1,0 +1,125 @@
+JOB DESCRIPTION: BACKEND DEVELOPER
+
+Position: Backend Developer
+Department: Engineering
+Location: Remote/Hybrid
+Employment Type: Full-time
+Experience Level: Mid to Senior (3-7 years)
+
+COMPANY OVERVIEW:
+We are building an innovative AI-powered interview assistant platform that revolutionizes the hiring process through intelligent voice interactions, real-time transcription, and comprehensive candidate evaluation.
+
+JOB SUMMARY:
+We are seeking a skilled Backend Developer to join our engineering team. You will be responsible for designing, developing, and maintaining robust backend services that power our AI interview platform. You'll work with cutting-edge technologies including FastAPI, WebRTC, real-time communication, and AI/ML integrations.
+
+KEY RESPONSIBILITIES:
+
+1. API Development & Architecture:
+   - Design and implement RESTful APIs using FastAPI
+   - Develop GraphQL endpoints for complex data queries
+   - Create scalable microservices architecture
+   - Implement API versioning and backward compatibility
+
+2. Database Design & Management:
+   - Design and optimize database schemas (PostgreSQL, MongoDB)
+   - Implement database migrations and seeding
+   - Write efficient database queries and optimize performance
+   - Implement caching strategies (Redis, Memcached)
+
+3. Real-time Communication:
+   - Integrate WebRTC for real-time voice/video communication
+   - Implement WebSocket connections for live data streaming
+   - Handle real-time transcription and audio processing
+   - Manage connection pooling and load balancing
+
+4. Authentication & Security:
+   - Implement JWT-based authentication and authorization
+   - Secure API endpoints with proper validation
+   - Implement rate limiting and DDoS protection
+   - Ensure data encryption and privacy compliance (GDPR, CCPA)
+
+5. AI/ML Integration:
+   - Integrate with AI/ML services for interview analysis
+   - Process and store interview transcripts and evaluations
+   - Implement sentiment analysis and scoring algorithms
+   - Handle real-time AI model inference
+
+6. Performance & Scalability:
+   - Optimize application performance and response times
+   - Implement horizontal scaling strategies
+   - Monitor and optimize database performance
+   - Set up application monitoring and logging
+
+7. Testing & Quality Assurance:
+   - Write comprehensive unit and integration tests
+   - Implement automated testing pipelines
+   - Perform code reviews and maintain code quality
+   - Conduct performance testing and optimization
+
+8. DevOps & Deployment:
+   - Work with Docker containers and Kubernetes
+   - Implement CI/CD pipelines
+   - Manage cloud infrastructure (AWS, GCP, Azure)
+   - Monitor application health and performance
+
+REQUIRED SKILLS & EXPERIENCE:
+
+Technical Skills:
+- Strong proficiency in Python (3.8+)
+- Experience with FastAPI, Django, or Flask frameworks
+- Knowledge of async programming and asyncio
+- Experience with PostgreSQL, MongoDB, or similar databases
+- Understanding of RESTful API design principles
+- Experience with WebRTC and real-time communication
+- Knowledge of WebSocket protocols and implementation
+- Experience with Redis or similar caching solutions
+- Understanding of microservices architecture
+- Experience with Docker and containerization
+- Knowledge of cloud platforms (AWS, GCP, Azure)
+
+Programming & Tools:
+- Git version control and collaborative development
+- Unit testing frameworks (pytest, unittest)
+- API testing tools (Postman, Insomnia)
+- Database design and optimization
+- Performance monitoring and profiling tools
+- Logging and monitoring solutions (ELK stack, Prometheus)
+
+Soft Skills:
+- Strong problem-solving and analytical thinking
+- Excellent communication and collaboration skills
+- Ability to work in an agile development environment
+- Self-motivated and able to work independently
+- Attention to detail and code quality
+- Ability to mentor junior developers
+
+PREFERRED QUALIFICATIONS:
+- Experience with AI/ML integration and APIs
+- Knowledge of speech-to-text and natural language processing
+- Experience with video/audio processing libraries
+- Understanding of WebRTC internals and optimization
+- Experience with real-time data streaming (Kafka, RabbitMQ)
+- Knowledge of GraphQL and schema design
+- Experience with serverless architectures
+- Understanding of security best practices and compliance
+
+EDUCATION:
+- Bachelor's degree in Computer Science, Software Engineering, or related field
+- Equivalent work experience will be considered
+
+BENEFITS:
+- Competitive salary and equity package
+- Health, dental, and vision insurance
+- Flexible work hours and remote work options
+- Professional development and learning opportunities
+- Modern development tools and equipment
+- Collaborative and innovative work environment
+
+WORK ENVIRONMENT:
+- Fast-paced startup environment
+- Opportunity to work with cutting-edge AI/ML technologies
+- Collaborative team with experienced engineers
+- Regular hackathons and innovation days
+- Continuous learning and skill development
+
+This role offers an exciting opportunity to work on a groundbreaking AI-powered platform that's transforming the hiring industry. You'll have the chance to work with the latest technologies and make a significant impact on the product's success. 

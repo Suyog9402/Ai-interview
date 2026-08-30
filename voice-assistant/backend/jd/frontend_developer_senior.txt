@@ -1,0 +1,149 @@
+JOB DESCRIPTION: SENIOR FRONTEND DEVELOPER
+
+Position: Senior Frontend Developer
+Department: Engineering
+Location: Remote/Hybrid
+Employment Type: Full-time
+Experience Level: 5+ years (Senior/Lead Level)
+
+COMPANY OVERVIEW:
+We are building an innovative AI-powered interview assistant platform that revolutionizes the hiring process through intelligent voice interactions, real-time transcription, and comprehensive candidate evaluation.
+
+JOB SUMMARY:
+We are seeking an experienced Senior Frontend Developer to lead our frontend engineering efforts. You will be responsible for architecting, designing, and implementing high-performance user interfaces for our AI interview platform. You'll mentor junior developers, make technical decisions, and ensure the highest code quality and user experience standards.
+
+KEY RESPONSIBILITIES:
+
+1. Technical Leadership & Architecture:
+   - Lead frontend architecture design and technical decisions
+   - Design scalable component libraries and design systems
+   - Establish coding standards and best practices
+   - Make technology stack decisions and evaluations
+   - Plan frontend performance and optimization strategies
+
+2. Advanced UI Development:
+   - Architect and implement complex user interfaces
+   - Design reusable component libraries and design systems
+   - Implement advanced UI patterns and interactions
+   - Create responsive and accessible user experiences
+   - Optimize UI performance and user experience
+
+3. Real-time Communication Leadership:
+   - Architect WebRTC-based voice/video communication interfaces
+   - Design real-time data visualization and synchronization
+   - Implement advanced audio/video device management
+   - Optimize real-time communication performance
+   - Handle complex real-time state management
+
+4. Performance & Optimization Leadership:
+   - Lead frontend performance optimization initiatives
+   - Implement advanced code splitting and lazy loading
+   - Optimize bundle sizes and Core Web Vitals
+   - Design performance monitoring and analytics
+   - Implement advanced caching and CDN strategies
+
+5. State Management & Data Flow:
+   - Architect complex state management solutions
+   - Design efficient data flow and API integration patterns
+   - Implement advanced state synchronization
+   - Optimize data fetching and caching strategies
+   - Handle complex real-time data updates
+
+6. Testing & Quality Assurance Leadership:
+   - Lead testing strategy and implementation
+   - Design comprehensive testing frameworks
+   - Implement advanced testing patterns and automation
+   - Ensure accessibility and cross-browser compatibility
+   - Lead quality assurance initiatives
+
+7. Team Leadership & Mentorship:
+   - Lead and mentor junior frontend developers
+   - Conduct code reviews and technical interviews
+   - Provide technical guidance and architecture decisions
+   - Collaborate with designers and product managers
+   - Drive technical excellence and innovation
+
+8. Modern Development Leadership:
+   - Lead adoption of modern frontend technologies
+   - Implement advanced build and deployment strategies
+   - Design development workflows and tooling
+   - Ensure code quality and maintainability
+   - Drive continuous improvement initiatives
+
+REQUIRED SKILLS & EXPERIENCE:
+
+Technical Leadership:
+- 5+ years of experience in frontend development
+- Proven experience leading frontend teams and projects
+- Strong architectural and system design skills
+- Experience with large-scale frontend applications
+- Ability to make critical technical decisions
+
+Advanced Technical Skills:
+- Expert-level JavaScript/TypeScript programming
+- Deep understanding of React.js and modern patterns
+- Advanced knowledge of modern CSS and styling approaches
+- Expert knowledge of frontend performance optimization
+- Advanced WebRTC and real-time communication expertise
+
+Frontend Architecture:
+- Experience designing scalable component architectures
+- Advanced knowledge of state management patterns
+- Experience with micro-frontend architectures
+- Advanced knowledge of frontend build systems
+- Experience with progressive web applications
+
+Performance & Optimization:
+- Advanced frontend performance optimization expertise
+- Experience with Core Web Vitals optimization
+- Advanced knowledge of bundle optimization
+- Experience with frontend monitoring and analytics
+- Advanced knowledge of caching and CDN strategies
+
+Testing & Quality:
+- Advanced testing strategy and implementation
+- Experience with comprehensive testing frameworks
+- Advanced knowledge of accessibility standards
+- Experience with cross-browser compatibility
+- Advanced knowledge of frontend security
+
+Leadership Skills:
+- Strong technical leadership and decision-making abilities
+- Excellent communication and stakeholder management
+- Experience mentoring and developing junior developers
+- Ability to drive technical excellence and innovation
+- Strong problem-solving and analytical thinking
+
+PREFERRED QUALIFICATIONS:
+- Experience with WebRTC and real-time communication
+- Advanced knowledge of audio/video processing in browsers
+- Experience with complex state management solutions
+- Advanced knowledge of frontend security and performance
+- Experience with design systems and component libraries
+- Advanced knowledge of modern CSS and styling approaches
+- Experience with frontend monitoring and observability
+- Advanced knowledge of progressive web applications
+
+EDUCATION:
+- Bachelor's degree in Computer Science, Web Development, or related field
+- Master's degree preferred
+- Relevant certifications in frontend technologies
+
+BENEFITS:
+- Competitive senior-level salary and equity package
+- Health, dental, and vision insurance
+- Flexible work hours and remote work options
+- Professional development and conference opportunities
+- Modern development tools and equipment
+- Leadership and career growth opportunities
+- Collaborative and innovative work environment
+
+WORK ENVIRONMENT:
+- Fast-paced startup environment with technical leadership opportunities
+- Opportunity to work with cutting-edge frontend technologies
+- Lead technical initiatives and mentor team members
+- Regular technical conferences and workshops
+- Continuous learning and skill development
+- Impact on product architecture and technical direction
+
+This role offers an exciting opportunity to lead frontend technical initiatives in a groundbreaking AI-powered platform that's transforming the hiring industry. You'll have the chance to architect scalable frontend solutions, mentor talented developers, and make significant technical decisions that impact the product's success. 
