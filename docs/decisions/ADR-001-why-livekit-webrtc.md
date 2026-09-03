@@ -8,7 +8,7 @@ Building a conversational voice AI interviewer requires bidirectional audio stre
    - *Pros*: Full protocol control, no third-party media server dependencies.
    - *Cons*: High development overhead for jitter buffer management, packet loss concealment, echo cancellation, and network degradation handling over TCP/WebSocket framing.
 2. **LiveKit WebRTC Agent Framework (Chosen)**
-   - *Pros*: Sub-200ms glass-to-glass latency over UDP/WebRTC, built-in Silero VAD, native interruption handling, automated room orchestration, and deep integration with OpenAI Realtime API.
+   - *Pros*: Sub-200ms glass-to-glass latency over UDP/WebRTC, built-in Silero VAD, native interruption handling, automated room orchestration, and integration with Deepgram Nova-2 STT, Groq Qwen 2.5 LLM, and Deepgram Aura TTS.
    - *Cons*: Requires LiveKit server instance or cloud endpoint.
 
 ## Decision

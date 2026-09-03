@@ -1,7 +1,7 @@
 # ADR-002: Why LangGraph Over Linear LangChain Chains
 
 ## Context
-Post-interview candidate assessment requires a multi-step evaluation workflow: audio transcription, quality gates, resume extraction, hard-filter checking, hybrid RAG grounding, and multi-agent scoring. Linear DAG chains (like basic LangChain `SequentialChain`) fail when cyclical retry loops or conditional early exits are required.
+Post-interview candidate assessment requires a multi-step evaluation workflow: audio transcription, quality gates, resume extraction, hard-filter checking, hybrid RAG grounding, and multi-criteria scoring. Linear DAG chains (like basic LangChain `SequentialChain`) fail when cyclical retry loops or conditional early exits are required.
 
 ## Options Considered
 1. **Linear LangChain Chains (`RunnableSequence`)**

@@ -17,16 +17,16 @@ This document outlines architectural trade-offs, current design boundaries, and 
 ---
 
 ## 3. RAG Retrieval & Neural Reranking
-- **Active Ranking**: Dense embeddings (`text-embedding-3-small` / local deterministic vectors) + pure-Python Okapi BM25 with min-max normalization.
+- **Active Ranking**: Dense embeddings (Google `text-embedding-004` / OpenAI embeddings / local deterministic vectors) + pure-Python Okapi BM25 with normalized hybrid fusion.
 - **Cross-Encoder Reranking**: The `RerankerInterface` is architected as an extensible plugin hook. Deep learning cross-encoder neural rerankers (e.g. `bge-reranker-large` / Cohere Rerank) can be plugged in without refactoring the retrieval pipeline.
 
 ---
 
-## 4. Multi-Agent Evaluation Model Sharing
+## 4. Multi-Criteria Evaluation Pipeline Architecture
 - **Resource Optimization**: Specialized evaluation criteria (Technical Accuracy, Problem Solving, Communication) execute structured prompting through the configured LLM rather than spinning up multiple independent heavy models, reducing API token consumption, latency, and operational cost.
 
 ---
 
 ## 5. Offline Fallback & Free-Tier Resiliency
 - **Zero-Cost Operation**: The entire unit test suite (`pytest`) and RAG retrieval benchmark (`scripts/evaluate_rag.py`) operate 100% offline with zero external API calls or billing requirements.
-- **Demo Mode**: In environments where OpenAI API keys are not configured or rate limits are exceeded, deterministic fallback extractors and mock assessment handlers ensure the application remains functional.
+- **Demo Mode**: In environments where external AI API keys (Groq, Gemini, Deepgram, OpenAI) are not configured or rate limits are exceeded, deterministic fallback extractors and mock assessment handlers ensure the application remains functional.

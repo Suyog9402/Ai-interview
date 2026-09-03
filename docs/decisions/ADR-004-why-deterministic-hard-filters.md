@@ -12,4 +12,4 @@ In corporate recruiting workflows, job postings frequently mandate strict minimu
    - *Cons*: Requires structured schema extraction of resume attributes before filtering.
 
 ## Decision
-We implemented **deterministic hard-filtering gates in the LangGraph workflow**. If a candidate fails mandatory hard constraints, the pipeline branches immediately to candidate summary generation with a clear disqualification reason, completely bypassing costly LLM multi-agent evaluation prompts.
+We implemented **deterministic hard-filtering gates in the LangGraph workflow**. If a candidate fails mandatory hard constraints, the pipeline branches immediately to candidate summary generation with a clear disqualification reason, completely bypassing costly LLM evaluation prompts.
