@@ -145,7 +145,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
         Returns (questions, answers) lists.
         """
         if not self.model:
-            print("⚠️ Warning: Model not available for Q&A extraction, using fallback")
+            print("[!] Warning: Model not available for Q&A extraction, using fallback")
             return [], []
         
         try:
@@ -155,7 +155,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                 for msg in conversation
             ])
             
-            print("🔍 Extracting Q&A pairs from transcript using structured output...")
+            print("[*] Extracting Q&A pairs from transcript using structured output...")
             
             # Use structured output to extract Q&A pairs
             chain = self.qa_extraction_prompt | self.model.with_structured_output(QAPairsExtraction)
@@ -169,20 +169,20 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
             questions = [pair.question for pair in extracted_pairs]
             answers = [pair.answer for pair in extracted_pairs]
             
-            print(f"✅ Extracted {len(questions)} Q&A pairs from transcript:")
+            print(f"[+] Extracted {len(questions)} Q&A pairs from transcript:")
             for i, (q, a) in enumerate(zip(questions, answers), 1):
                 print(f"  Q{i}: {q[:100]}{'...' if len(q) > 100 else ''}")
                 print(f"  A{i}: {a[:100]}{'...' if len(a) > 100 else ''}")
             
             # Require at least one pair; no artificial cap
             if len(questions) == 0:
-                print("⚠️ Warning: No Q&A pairs extracted.")
+                print("[!] Warning: No Q&A pairs extracted.")
             else:
-                print(f"✅ Will evaluate all {len(questions)} Q&A pairs.")
+                print(f"[+] Will evaluate all {len(questions)} Q&A pairs.")
             return questions, answers
             
         except Exception as e:
-            print(f"❌ Error extracting Q&A pairs from transcript: {e}")
+            print(f"[-] Error extracting Q&A pairs from transcript: {e}")
             import traceback
             traceback.print_exc()
             return [], []
@@ -202,19 +202,19 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
         """
         # Extract Q&A pairs from transcript using structured output if needed
         # Always extract from transcript to ensure accuracy
-        print("📝 Extracting Q&A pairs from transcript using structured output...")
+        print("[*] Extracting Q&A pairs from transcript using structured output...")
         extracted_questions, extracted_answers = await self.extract_qa_pairs_from_transcript(conversation)
         
         # Use extracted Q&A pairs if we got any
         if extracted_questions and extracted_answers and len(extracted_questions) >= 1:
             questions = extracted_questions
             answers = extracted_answers
-            print(f"✅ Using {len(questions)} Q&A pairs extracted from transcript")
+            print(f"[+] Using {len(questions)} Q&A pairs extracted from transcript")
         else:
-            print("⚠️ Using provided Q&A pairs (extraction failed or incomplete)")
+            print("[!] Using provided Q&A pairs (extraction failed or incomplete)")
         # Validate and ensure we have matching questions and answers
         if len(questions) != len(answers):
-            print(f"⚠️ Warning: Mismatch between questions ({len(questions)}) and answers ({len(answers)})")
+            print(f"[!] Warning: Mismatch between questions ({len(questions)}) and answers ({len(answers)})")
             # Pad with empty strings to match the longer list
             max_length = max(len(questions), len(answers))
             while len(questions) < max_length:
@@ -223,7 +223,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                 answers.append("No answer provided")
         
         # Log each Q&A pair for verification
-        print(f"📝 Evaluating {len(questions)} Q&A pairs:")
+        print(f"[*] Evaluating {len(questions)} Q&A pairs:")
         for i, (q, a) in enumerate(zip(questions, answers), 1):
             print(f"  Q{i}: {q[:100]}{'...' if len(q) > 100 else ''}")
             print(f"  A{i}: {a[:100]}{'...' if len(a) > 100 else ''}")
@@ -265,7 +265,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                     # Validate that we have feedback for all Q&A pairs
                     detailed_feedback = evaluation.get("detailed_feedback", [])
                     if len(detailed_feedback) != len(questions):
-                        print(f"⚠️ Warning: LLM returned {len(detailed_feedback)} feedback items, expected {len(questions)}")
+                        print(f"[!] Warning: LLM returned {len(detailed_feedback)} feedback items, expected {len(questions)}")
                     
                     # Helper function to clean question text (remove transition phrases)
                     def clean_question(question_text: str) -> str:
@@ -341,7 +341,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                         validated_feedback.append(feedback_item)
                     
                     # Log scores for verification
-                    print("📊 Evaluation Scores:")
+                    print("[*] Evaluation Scores:")
                     for i, fb in enumerate(validated_feedback, 1):
                         print(f"  Q{i}: {fb.get('score', 0)}/100 - {fb.get('feedback', '')[:80]}...")
                     
@@ -371,17 +371,17 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                     # Store in database
                     storage_success = await self._store_evaluation_result(result, db)
                     if not storage_success:
-                        print("⚠️ Warning: Failed to store evaluation result in database")
+                        print("[!] Warning: Failed to store evaluation result in database")
                     
                     # Store individual Q&A pairs
                     qa_success = await self._store_qa_pairs(session_id, user_id, questions, answers, validated_feedback, db)
                     if not qa_success:
-                        print("⚠️ Warning: Failed to store Q&A pairs in database")
+                        print("[!] Warning: Failed to store Q&A pairs in database")
                     
                     return result
                     
                 except json.JSONDecodeError as e:
-                    print(f"❌ JSON parsing error: {e}")
+                    print(f"[-] JSON parsing error: {e}")
                     print(f"Raw response: {response.content[:500]}...")
                     fallback_result = self._create_fallback_result(session_id, user_id, questions, answers)
                     await self._store_evaluation_result(fallback_result, db)
@@ -396,7 +396,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                 return fallback_result
                 
         except Exception as e:
-            print(f"❌ Error in interview evaluation: {e}")
+            print(f"[-] Error in interview evaluation: {e}")
             import traceback
             traceback.print_exc()
             fallback_result = self._create_fallback_result(session_id, user_id, questions, answers)
@@ -510,7 +510,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                 db.commit()
                 db.refresh(existing_result)
                 
-                print(f"✅ Updated evaluation result for session {result.session_id}")
+                print(f"[+] Updated evaluation result for session {result.session_id}")
             else:
                 # Create new record
                 interview_result = InterviewResult(
@@ -534,7 +534,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                 db.commit()
                 db.refresh(interview_result)
                 
-                print(f"✅ Created new evaluation result for session {result.session_id}")
+                print(f"[+] Created new evaluation result for session {result.session_id}")
             
             return True
             
@@ -558,7 +558,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
         Store individual Q&A pairs in the qa_pairs table
         """
         try:
-            print(f"💾 Storing {len(questions)} Q&A pairs for session {session_id}")
+            print(f"  Storing {len(questions)} Q&A pairs for session {session_id}")
             
             for i, (question, answer) in enumerate(zip(questions, answers)):
                 # Get score from detailed feedback if available
@@ -578,7 +578,7 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                 db.add(qa_pair)
             
             db.commit()
-            print(f"✅ Successfully stored {len(questions)} Q&A pairs")
+            print(f"[+] Successfully stored {len(questions)} Q&A pairs")
             return True
             
         except Exception as e:

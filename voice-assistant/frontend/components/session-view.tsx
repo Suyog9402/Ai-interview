@@ -625,15 +625,15 @@ export const SessionView = ({
           },
         };
 
-        // Store the enhanced result in localStorage with a consistent key
-        const storageKey = `interview_result_${sessionId}`;
-        localStorage.setItem(storageKey, JSON.stringify(enhancedResult));
-
-        // Also store the latest session ID for easier retrieval
-        localStorage.setItem("latest_interview_session", sessionId);
-
-        // For backward compatibility, also save with the old key
-        localStorage.setItem("interviewResult", JSON.stringify(enhancedResult));
+        // Store the enhanced result in localStorage with a consistent key (with quota guard)
+        try {
+          const storageKey = `interview_result_${sessionId}`;
+          localStorage.setItem(storageKey, JSON.stringify(enhancedResult));
+          localStorage.setItem("latest_interview_session", sessionId);
+          localStorage.setItem("interviewResult", JSON.stringify(enhancedResult));
+        } catch (storageErr) {
+          console.warn("Could not save full result to localStorage (quota exceeded), continuing:", storageErr);
+        }
 
         console.log(
           "✅ Interview evaluation completed with enhanced analysis:",

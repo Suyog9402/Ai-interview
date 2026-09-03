@@ -58,6 +58,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body
         className={`${publicSans.variable} ${commitMono.variable} overflow-x-hidden antialiased`}
+        suppressHydrationWarning
       >
         <Providers>{children}</Providers>
       </body>

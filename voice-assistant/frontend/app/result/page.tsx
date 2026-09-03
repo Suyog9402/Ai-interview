@@ -152,11 +152,15 @@ export default function ResultPage() {
           setResult(merged);
           // cache
           if (merged.session_id) {
-            localStorage.setItem(
-              `interview_result_${merged.session_id}`,
-              JSON.stringify(merged),
-            );
-            localStorage.setItem("latest_interview_session", merged.session_id);
+            try {
+              localStorage.setItem(
+                `interview_result_${merged.session_id}`,
+                JSON.stringify(merged),
+              );
+              localStorage.setItem("latest_interview_session", merged.session_id);
+            } catch (e) {
+              console.warn("Could not cache interview result in localStorage:", e);
+            }
           }
         } else {
           setResult(null);
