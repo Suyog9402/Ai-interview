@@ -7,10 +7,11 @@ from app.models.qa import QAPair
 from app.models.interview import InterviewResult
 from app.schemas.interview import InterviewResultResponse, ConversationMessage
 from app.services.rag_service import rag_service
-from langchain_openai import ChatOpenAI
+from app.core.llm_provider import get_chat_llm
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 import json
+import re
 
 # Pydantic models for structured output
 class QAPairExtraction(BaseModel):
@@ -25,17 +26,8 @@ class QAPairsExtraction(BaseModel):
 
 class InterviewService:
     def __init__(self):
-        # Initialize OpenAI for evaluation
-        self.model = None
-        if rag_service.openai_configured:
-            try:
-                self.model = ChatOpenAI(
-                    model="gpt-4o",
-                    api_key=os.getenv("OPENAI_API_KEY"),
-                    temperature=0.3  # Lower temperature for more consistent, strict evaluation
-                )
-            except Exception as e:
-                print(f"Error initializing interview service model: {e}")
+        # Initialize smart LLM (Groq / Gemini / OpenAI)
+        self.model = get_chat_llm(temperature=0.3, prefer="groq")
         
         # Evaluation prompts
         self.evaluation_prompt = ChatPromptTemplate.from_messages([
@@ -258,17 +250,16 @@ Extract ALL question-answer pairs from the transcript. Ensure each question cont
                     "conversation": conversation_text
                 })
                 
-                # Parse JSON response
+                # Parse JSON response robustly
                 try:
                     content = response.content.strip()
-                    if content.startswith('```json'):
-                        content = content[7:]
-                    if content.startswith('```'):
-                        content = content[3:]
-                    if content.endswith('```'):
-                        content = content[:-3]
-                    content = content.strip()
+                    content = re.sub(r"^```(?:json)?\s*", "", content, flags=re.MULTILINE)
+                    content = re.sub(r"\s*```$", "", content, flags=re.MULTILINE).strip()
                     
+                    json_match = re.search(r"\{.*\}", content, re.DOTALL)
+                    if json_match:
+                        content = json_match.group(0)
+                        
                     evaluation = json.loads(content)
                     
                     # Validate that we have feedback for all Q&A pairs

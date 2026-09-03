@@ -6,30 +6,21 @@ from pathlib import Path
 from app.services.transcription.base import BaseTranscriber
 from app.core.exceptions import TranscriptionException
 
+from app.core.llm_provider import transcribe_audio_file
+
 logger = logging.getLogger(__name__)
 
 
 class OpenAIRealtimeTranscriber(BaseTranscriber):
-    """OpenAI Realtime API transcriber implementation"""
+    """Smart transcriber implementation using Groq Whisper / OpenAI Whisper"""
     
-    def __init__(self, api_key: str, model: str = "gpt-4o-realtime-preview"):
+    def __init__(self, api_key: Optional[str] = None, model: str = "whisper-large-v3"):
         """
-        Initialize OpenAI Realtime transcriber.
-        
-        Args:
-            api_key: OpenAI API key
-            model: Model to use for transcription
+        Initialize transcriber.
         """
         super().__init__()
         self.api_key = api_key
         self.model = model
-        # Note: OpenAI Realtime API is primarily for real-time conversations
-        # For file transcription, we'll use OpenAI Whisper API
-        try:
-            import openai
-            self.client = openai.OpenAI(api_key=api_key)
-        except ImportError:
-            raise TranscriptionException("OpenAI library not installed. Install with: pip install openai")
     
     async def transcribe_file(
         self,
@@ -38,54 +29,50 @@ class OpenAIRealtimeTranscriber(BaseTranscriber):
         enable_diarization: bool = True
     ) -> Dict[str, Any]:
         """
-        Transcribe an audio/video file using OpenAI Whisper API.
-        
-        Args:
-            file_path: Path to audio/video file
-            language: Optional language code
-            enable_diarization: Whether to enable speaker diarization
-        
-        Returns:
-            Dictionary with transcript data
+        Transcribe an audio/video file using Groq Whisper API / OpenAI Whisper API.
         """
         try:
             if not os.path.exists(file_path):
                 raise TranscriptionException(f"File not found: {file_path}")
             
-            # Open file for transcription
-            with open(file_path, 'rb') as audio_file:
-                # Use Whisper API for file transcription
-                # Note: OpenAI Whisper doesn't support diarization natively
-                # We'll use a workaround or separate diarization service
-                transcript_response = self.client.audio.transcriptions.create(
-                    model="whisper-1",
-                    file=audio_file,
-                    language=language,
-                    response_format="verbose_json"
-                )
+            # Use unified transcriber
+            res = transcribe_audio_file(file_path)
+            if not res:
+                raise TranscriptionException("Audio transcription failed with available providers.")
             
-            # Process transcript into required format
+            transcript_text = res.get("text", "")
+            raw_segments = res.get("segments", [])
+            lang = res.get("language", language or "en")
+            
             transcript_data = {
-                "text": transcript_response.text,
-                "language": transcript_response.language,
+                "text": transcript_text,
+                "language": lang,
                 "segments": []
             }
             
-            # Extract segments if available
-            if hasattr(transcript_response, 'segments'):
-                for segment in transcript_response.segments:
+            for segment in raw_segments:
+                if isinstance(segment, dict):
                     transcript_data["segments"].append({
                         "id": segment.get("id", 0),
+                        "speaker": segment.get("speaker", "speaker_0"),
                         "start": segment.get("start", 0.0),
                         "end": segment.get("end", 0.0),
                         "text": segment.get("text", ""),
-                        "confidence": segment.get("no_speech_prob", 0.0)  # Inverse of no_speech_prob
+                        "confidence": segment.get("confidence", 1.0 - segment.get("no_speech_prob", 0.1))
+                    })
+                elif hasattr(segment, "text"):
+                    transcript_data["segments"].append({
+                        "id": getattr(segment, "id", 0),
+                        "speaker": getattr(segment, "speaker", "speaker_0"),
+                        "start": getattr(segment, "start", 0.0),
+                        "end": getattr(segment, "end", 0.0),
+                        "text": getattr(segment, "text", ""),
+                        "confidence": 0.95
                     })
             
-            # Basic diarization (single speaker for now)
-            # TODO: Integrate proper diarization service
-            diarization_data = None
-            if enable_diarization:
+            # Diarization data from Deepgram or fallback
+            diarization_data = res.get("diarization")
+            if not diarization_data and enable_diarization:
                 diarization_data = {
                     "speakers": ["speaker_0"],
                     "segments": [

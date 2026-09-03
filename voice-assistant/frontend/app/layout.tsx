@@ -1,14 +1,13 @@
-import { Public_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
 import { getAppConfig } from "@/lib/utils";
 import { Providers } from "@/components/providers";
 import "./globals.css";
 
-const publicSans = Public_Sans({
+// Offline-safe font variable to prevent remote Google Fonts fetch failures during CI/offline builds
+const publicSans = {
   variable: "--font-public-sans",
-  subsets: ["latin"],
-});
+};
 
 const commitMono = localFont({
   src: [

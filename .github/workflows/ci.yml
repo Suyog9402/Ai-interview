@@ -1,0 +1,73 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  backend-checks:
+    name: Backend Lint & Unit Tests (100% Offline)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: voice-assistant/backend
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio flake8
+
+      - name: Syntax and Flake8 Linting
+        run: |
+          # Stop build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      - name: Run Pytest Test Suite
+        run: |
+          python -m pytest tests/ -v
+
+      - name: Run Offline RAG Benchmark
+        run: |
+          python scripts/evaluate_rag.py
+
+  frontend-checks:
+    name: Frontend Typecheck & Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: voice-assistant/frontend
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile || pnpm install
+
+      - name: Build Next.js Application
+        env:
+          NEXT_PUBLIC_API_URL: "http://localhost:8000/api/v1"
+        run: pnpm build

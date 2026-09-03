@@ -1,27 +1,31 @@
-from typing import Dict, Any, Optional
-from langchain_openai import ChatOpenAI
+from typing import Dict, Any, Optional, List, Literal
+from pydantic import BaseModel, Field, ValidationError
+from app.core.llm_provider import get_chat_llm
 from langchain_core.prompts import ChatPromptTemplate
 import os
 import logging
 import json
+import re
 
 logger = logging.getLogger(__name__)
 
 
+class AnswerAssessmentResult(BaseModel):
+    """Pydantic schema for structured answer assessment."""
+    score: float = Field(default=50.0, ge=0.0, le=100.0)
+    quality: Literal["excellent", "good", "fair", "poor"] = "fair"
+    strengths: List[str] = Field(default_factory=list)
+    weaknesses: List[str] = Field(default_factory=list)
+    topics_covered: List[str] = Field(default_factory=list)
+    needs_followup: bool = False
+    answer_felt_interesting: bool = False
+
+
 class AnswerAssessor:
-    """Assesses answer quality using LLM"""
+    """Assesses answer quality using LLM with Pydantic structured output validation."""
     
     def __init__(self):
-        self.model = None
-        if os.getenv("OPENAI_API_KEY"):
-            try:
-                self.model = ChatOpenAI(
-                    model="gpt-4o-mini",
-                    api_key=os.getenv("OPENAI_API_KEY"),
-                    temperature=0.3
-                )
-            except Exception as e:
-                logger.error(f"Error initializing answer assessor: {e}")
+        self.model = get_chat_llm(temperature=0.3, prefer="groq")
     
     def assess_answer(
         self, 
@@ -29,10 +33,9 @@ class AnswerAssessor:
         answer: str,
         context: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
-        """Assess answer quality and extract insights"""
-        if not self.model:
-            # Fallback to simple assessment
-            return self._simple_assess(answer)
+        """Assess candidate answer quality with structured schema validation and safe fallback."""
+        if not self.model or not answer or not answer.strip():
+            return self._simple_assess(answer or "")
         
         prompt = ChatPromptTemplate.from_messages([
             ("system", """You are an expert technical interviewer assessing candidate answers.
@@ -44,14 +47,15 @@ Analyze the answer and provide:
 4. Weaknesses (list)
 5. Topics covered (list)
 6. Whether follow-up is needed (boolean)
-7. answer_felt_interesting (boolean): true ONLY when the answer is excellent or good AND includes a concrete example, real project, or specific story (not generic). Used to decide whether to ask 1-2 optional behavioral questions later. Set false for vague or purely theoretical answers.
+7. answer_felt_interesting (boolean): true ONLY when the answer is excellent or good AND includes a concrete example, real project, or specific story (not generic).
 
-Be strict but fair. Excellent answers (80-100) show deep understanding and experience.
-Good answers (60-79) show solid understanding.
-Fair answers (40-59) show basic knowledge.
-Poor answers (0-39) show lack of knowledge or understanding.
+Be strict but fair:
+- Excellent (80-100): Deep understanding, concrete implementation experience, architecture trade-offs.
+- Good (60-79): Solid understanding, clear explanation.
+- Fair (40-59): Basic theoretical knowledge, lacks depth.
+- Poor (0-39): Inaccurate or vague.
 
-Return JSON format:
+Return ONLY a valid JSON object matching this schema:
 {
     "score": <0-100>,
     "quality": "<excellent|good|fair|poor>",
@@ -75,88 +79,74 @@ Assess this answer and return JSON.""")
             response = self.model.invoke(prompt.format_messages())
             content = (getattr(response, "content", None) or str(response)).strip()
             
-            # Extract JSON: strip markdown code fences and take only the JSON object
-            if "```" in content:
-                start = content.find("```")
-                if start >= 0:
-                    rest = content[start:]
-                    # Skip opening fence line
-                    nl = rest.find("\n")
-                    if nl >= 0:
-                        rest = rest[nl + 1:]
-                    end = rest.find("```")
-                    if end >= 0:
-                        content = rest[:end].strip()
-            start_brace = content.find("{")
-            end_brace = content.rfind("}")
-            if start_brace >= 0 and end_brace > start_brace:
-                content = content[start_brace : end_brace + 1]
+            # Clean markdown code fences safely using regex
+            clean_json = re.sub(r"^```(?:json)?\s*", "", content, flags=re.MULTILINE)
+            clean_json = re.sub(r"\s*```$", "", clean_json, flags=re.MULTILINE).strip()
             
-            result = json.loads(content)
-            if not isinstance(result, dict):
-                return self._simple_assess(answer)
+            # Extract outermost JSON object
+            json_match = re.search(r"\{.*\}", clean_json, re.DOTALL)
+            if json_match:
+                clean_json = json_match.group(0)
             
-            # Use .get() for all keys to avoid KeyError on malformed or truncated output
-            score = result.get("score", 50)
-            if not isinstance(score, (int, float)):
-                score = 50
-            quality = (result.get("quality") or "fair").lower()
-            if quality not in ("excellent", "good", "fair", "poor"):
-                quality = "fair"
-            return {
-                "score": float(score),
-                "quality": quality,
-                "strengths": result.get("strengths") if isinstance(result.get("strengths"), list) else [],
-                "weaknesses": result.get("weaknesses") if isinstance(result.get("weaknesses"), list) else [],
-                "topics_covered": result.get("topics_covered") if isinstance(result.get("topics_covered"), list) else [],
-                "needs_followup": bool(result.get("needs_followup", score < 70)),
-                "answer_felt_interesting": bool(
-                    result.get("answer_felt_interesting",
-                        quality in ("excellent", "good") and score >= 70
-                    )
-                ),
-            }
-        except json.JSONDecodeError as e:
-            snippet = content[:300] if content else "n/a"
-            logger.warning(f"Answer assessor JSON parse error: {e}, content snippet: {snippet}")
-            return self._simple_assess(answer)
-        except Exception as e:
-            logger.warning(f"Error assessing answer: {e}", exc_info=True)
+            raw_dict = json.loads(clean_json)
+            validated = AnswerAssessmentResult.model_validate(raw_dict)
+            return validated.model_dump()
+            
+        except (json.JSONDecodeError, ValidationError, Exception) as e:
+            logger.warning(f"Answer assessor schema parse error: {e}. Falling back to deterministic assessment.")
             return self._simple_assess(answer)
     
     def _simple_assess(self, answer: str) -> Dict[str, Any]:
-        """Simple fallback assessment"""
-        answer_lower = answer.lower()
-        length = len(answer.split())
+        """Deterministic offline assessment when LLM is offline or output is malformed."""
+        answer_lower = (answer or "").lower()
+        words = re.findall(r"\b[\w'-]+\b", answer_lower)
+        length = len(words)
         
-        if length < 10:
+        if length < 8:
             return {
-                "score": 20,
+                "score": 25.0,
                 "quality": "poor",
                 "strengths": [],
-                "weaknesses": ["Answer too brief"],
+                "weaknesses": ["Answer too brief or incomplete"],
                 "topics_covered": [],
                 "needs_followup": True,
                 "answer_felt_interesting": False,
             }
-        elif length < 30:
+        
+        # Technical term check
+        tech_terms = [
+            "database", "api", "cache", "async", "redis", "postgresql", "docker",
+            "microservices", "pipeline", "performance", "indexing", "latency"
+        ]
+        found = [t for t in tech_terms if t in answer_lower]
+        
+        if length > 40 and len(found) >= 2:
             return {
-                "score": 50,
+                "score": 75.0,
+                "quality": "good",
+                "strengths": ["Structured explanation", f"Referenced concepts: {', '.join(found[:3])}"],
+                "weaknesses": [],
+                "topics_covered": found,
+                "needs_followup": False,
+                "answer_felt_interesting": True,
+            }
+        elif length >= 15:
+            return {
+                "score": 60.0,
                 "quality": "fair",
-                "strengths": [],
-                "weaknesses": ["Could be more detailed"],
-                "topics_covered": [],
+                "strengths": ["Clear communication"],
+                "weaknesses": ["Could include more specific architectural examples"],
+                "topics_covered": found,
                 "needs_followup": True,
                 "answer_felt_interesting": False,
             }
         else:
             return {
-                "score": 70,
-                "quality": "good",
-                "strengths": ["Detailed answer"],
-                "weaknesses": [],
-                "topics_covered": [],
-                "needs_followup": False,
-                "answer_felt_interesting": True,
+                "score": 45.0,
+                "quality": "fair",
+                "strengths": [],
+                "weaknesses": ["Basic response, lacks depth"],
+                "topics_covered": found,
+                "needs_followup": True,
+                "answer_felt_interesting": False,
             }
-

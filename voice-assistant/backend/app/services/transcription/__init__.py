@@ -14,23 +14,17 @@ def get_transcriber() -> TranscriberInterface:
     """
     provider = settings.transcriber_provider.lower()
     
-    if provider == "openai_realtime":
-        if not settings.openai_api_key:
-            raise TranscriptionException("OpenAI API key not configured")
+    if provider in ["groq", "openai_realtime", "openai"]:
         return OpenAIRealtimeTranscriber(
-            api_key=settings.openai_api_key,
-            model=settings.openai_realtime_model
+            api_key=settings.groq_api_key or settings.openai_api_key or settings.gemini_api_key,
+            model=settings.groq_whisper_model or "whisper-large-v3"
         )
     elif provider == "azure_realtime":
         if not settings.azure_speech_key or not settings.azure_speech_region:
             raise TranscriptionException("Azure Speech credentials not configured")
-        # return AzureRealtimeTranscriber(
-        #     api_key=settings.azure_speech_key,
-        #     region=settings.azure_speech_region
-        # )
         raise TranscriptionException("Azure Realtime transcription not yet implemented")
     else:
-        raise TranscriptionException(f"Unknown transcriber provider: {provider}")
+        return OpenAIRealtimeTranscriber()
 
 __all__ = ["get_transcriber", "BaseTranscriber", "OpenAIRealtimeTranscriber"]
 

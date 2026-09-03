@@ -1,83 +1,58 @@
 # Interview Assistant Backend
 
-This backend provides authentication and user management for the Interview Assistant application. The LiveKit agent for interviews runs separately using `main.py`.
+FastAPI application backend and LiveKit voice agent service for the AI Interview Assistant platform.
 
 ## Architecture
 
-- **FastAPI Backend** (`app/`) - Handles authentication, signup, login, and user management
-- **LiveKit Agent** (`main.py`) - Handles interview functionality with voice AI
+- **FastAPI Backend (`app/`)**: Provides REST endpoints for authentication (JWT/RBAC), candidate management, job descriptions, face detection WebSockets, and LangGraph evaluation pipelines.
+- **LiveKit Voice Agent (`app.py`)**: Real-time WebRTC voice agent interfacing with OpenAI Realtime API (`gpt-4o-realtime-preview`) and Silero VAD.
+- **RAG & Hybrid Matching (`app/services/rag/`)**: ChromaDB vector store + pure-Python Okapi BM25 ranking.
+- **Speech Metrics Engine (`app/services/voice_analysis.py`)**: Local calculation of WPM, response latency, pause statistics, and filler-word density.
 
-## Setup
+## Setup & Execution
 
 ### 1. Install Dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Environment Variables
-
-Create a `.env` file in the backend directory:
-
-```env
-# Database
-DATABASE_URL=postgresql://postgres@localhost:5432/interview_assistant
-
-# Security
-SECRET_KEY=your-secret-key-change-in-production
-
-# CORS
-ALLOWED_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000"]
-
-# LiveKit (for interview functionality)
-LIVEKIT_URL=wss://your-livekit-server.livekit.cloud
-LIVEKIT_API_KEY=your_livekit_api_key
-LIVEKIT_API_SECRET=your_livekit_api_secret
-
-# Azure OpenAI (for interview functionality)
-AZURE_OPENAI_REALTIME_ENDPOINT=your_azure_endpoint
-AZURE_OPENAI_REALTIME_API_KEY=your_azure_api_key
-AZURE_OPENAI_REALTIME_API_VERSION=2024-02-15-preview
-```
-
-### 3. Run FastAPI Backend
-
+### 2. Configure Environment
+Copy `.env.example` to `.env`:
 ```bash
-python start_fastapi.py
+cp .env.example .env
 ```
 
-The API will be available at `http://localhost:8000`
-
-### 4. Run LiveKit Agent (for interviews)
-
+### 3. Run FastAPI Application Server
 ```bash
-python main.py start
+python main.py
+# Or with uvicorn:
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+Interactive API docs available at: `http://localhost:8000/docs`
+
+### 4. Run LiveKit Real-Time Voice Agent
+```bash
+# In development mode:
+python app.py dev
+
+# In production worker mode:
+python app.py start
 ```
 
-## API Endpoints
+### 5. Run Offline Test Suite & RAG Benchmark (100% Free)
+```bash
+# Run full pytest test suite
+python -m pytest tests/ -v
 
-### Authentication
-- `POST /api/v1/auth/signup` - Create new user account
-- `POST /api/v1/auth/login` - Login user
-- `POST /api/v1/auth/login-form` - OAuth2 form login
+# Run offline RAG retrieval benchmark
+python scripts/evaluate_rag.py
+```
 
-### User Management
-- `GET /api/v1/users/me` - Get current user info
-- `PUT /api/v1/users/me` - Update current user
-- `DELETE /api/v1/users/me` - Delete current user
+## Admin Tooling
+```bash
+# List all admin users
+python scripts/manage_admin.py list
 
-## Database
-
-The application uses PostgreSQL as the default database. Make sure you have PostgreSQL installed and running, and that the database `interview_assistant` exists.
-
-## Frontend Integration
-
-The frontend is configured to connect to the FastAPI backend at `http://localhost:8000/api/v1`. Update the `NEXT_PUBLIC_API_URL` environment variable in the frontend if needed.
-
-## Security Features
-
-- Password hashing with bcrypt
-- JWT token authentication
-- CORS protection
-- Input validation with Pydantic
-- SQL injection protection with SQLAlchemy 
+# Reset admin password
+python scripts/manage_admin.py reset <username> <new_password>
+```

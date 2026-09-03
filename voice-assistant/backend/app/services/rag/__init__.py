@@ -1,13 +1,15 @@
 from app.services.rag.hybrid_retrieval import HybridRetrieval
 from app.services.rag.citation_tracker import CitationTracker
-from app.services.vector_stores import get_vector_store
+from app.services.rag.bm25 import OkapiBM25
 from app.core.config import settings
 
-__all__ = ["HybridRetrieval", "CitationTracker", "get_rag_service"]
+__all__ = ["HybridRetrieval", "CitationTracker", "OkapiBM25", "get_rag_service"]
 
 
 def get_rag_service():
     """Factory function to get RAG service"""
+    from app.services.vector_stores import get_vector_store
+    
     resume_store = get_vector_store(settings.vector_store_collection_resumes)
     transcript_store = get_vector_store(settings.vector_store_collection_transcripts)
     jd_store = get_vector_store(settings.vector_store_collection_jds)

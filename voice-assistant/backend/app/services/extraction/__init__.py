@@ -9,13 +9,8 @@ def get_extractor() -> ExtractorInterface:
     """
     Factory function to get the appropriate extractor based on config.
     """
-    # For now, we only have LLM extractor
-    # Future: could add hybrid extractor
-    if not settings.openai_api_key:
-        raise ExtractionException("OpenAI API key not configured for extraction")
-    
     return LLMExtractor(
-        api_key=settings.openai_api_key,
+        api_key=settings.openai_api_key or settings.groq_api_key or settings.gemini_api_key,
         model=settings.extraction_model,
         temperature=settings.extraction_temperature
     )

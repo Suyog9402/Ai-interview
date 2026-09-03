@@ -1,8 +1,16 @@
 import os
 from typing import List, Dict, Any, Optional
 from langchain_core.documents import Document
-from langchain_openai import OpenAIEmbeddings
-from langchain_chroma import Chroma
+from app.core.llm_provider import get_embeddings
+
+try:
+    from langchain_chroma import Chroma
+except ImportError:
+    try:
+        from langchain_community.vectorstores import Chroma
+    except ImportError:
+        Chroma = None
+
 from app.services.vector_stores.base import BaseVectorStore
 from app.core.config import settings
 from app.core.exceptions import RAGException
@@ -30,13 +38,9 @@ class ChromaVectorStore(BaseVectorStore):
         os.makedirs(persist_directory, exist_ok=True)
         
         # Initialize embeddings
-        if not settings.openai_api_key:
-            raise RAGException("OpenAI API key not configured for embeddings")
-        
-        self.embeddings = OpenAIEmbeddings(
-            model="text-embedding-3-small",
-            api_key=settings.openai_api_key
-        )
+        self.embeddings = get_embeddings()
+        if not self.embeddings:
+            raise RAGException("No embeddings provider (Gemini / OpenAI) configured")
         
         # Initialize ChromaDB
         self.vector_store = Chroma(

@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     access_token_expire_minutes: int = 30
     
     # Database settings - using PostgreSQL
-    database_url: str
+    database_url: str = "postgresql://postgres:postgres@localhost:5432/interview_assistant"
     
     # PostgreSQL specific settings
     database_pool_size: int = 5
@@ -61,10 +61,25 @@ class Settings(BaseSettings):
     storage_gcp_bucket: Optional[str] = None
     storage_gcp_credentials_path: Optional[str] = None
     
-    # Transcription Configuration
-    transcriber_provider: str = "openai_realtime"  # openai_realtime, azure_realtime
+    # AI & LLM Provider Keys
     openai_api_key: Optional[str] = None
     openai_realtime_model: str = "gpt-4o-realtime-preview"
+    
+    groq_api_key: Optional[str] = None
+    groq_model: str = "qwen/qwen3.8-27b"
+    groq_whisper_model: str = "whisper-large-v3"
+    
+    gemini_api_key: Optional[str] = None
+    google_api_key: Optional[str] = None
+    gemini_model: str = "gemini-2.5-flash"
+    gemini_embedding_model: str = "models/gemini-embedding-001"
+    
+    # Deepgram Configuration
+    deepgram_api_key: Optional[str] = None
+    deepgram_model: str = "nova-2"
+    
+    # Transcription Configuration
+    transcriber_provider: str = "deepgram"  # deepgram, groq, openai_realtime, azure_realtime
     azure_speech_key: Optional[str] = None
     azure_speech_region: Optional[str] = None
     
@@ -79,7 +94,7 @@ class Settings(BaseSettings):
     pgvector_connection_string: Optional[str] = None
     
     # Extraction Configuration
-    extraction_model: str = "gpt-4o"
+    extraction_model: str = "gemini-2.5-flash"
     extraction_temperature: float = 0.1
     
     # Matching Configuration

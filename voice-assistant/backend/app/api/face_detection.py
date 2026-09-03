@@ -8,7 +8,10 @@ import time
 from typing import Any, Dict
 
 import cv2
-import mediapipe as mp
+try:
+    import mediapipe as mp
+except Exception:
+    mp = None
 import numpy as np
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from scipy.spatial import distance as dist
@@ -41,16 +44,26 @@ router = APIRouter(prefix="/face-detection", tags=["face-detection"])
 # -----------------------------
 class EnhancedFaceDetector:
     def __init__(self) -> None:
-        # MediaPipe modules - lazy loaded to handle API changes
+        # MediaPipe modules - lazy loaded on first frame to allow instant startup
         self.mp_face_detection = None
         self.mp_face_mesh = None
         self.face_detection = None
         self.face_mesh = None
         self._mediapipe_available = False
-        
-        # Try to initialize MediaPipe (may fail with newer versions)
+        self._mediapipe_attempted = False
+
+        # OpenCV cascades as fallback
+        self.face_cascade = cv2.CascadeClassifier(
+            cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+        )
+
+    def _ensure_mediapipe(self):
+        """Lazy initializer for MediaPipe face detection and mesh models."""
+        if self._mediapipe_attempted:
+            return
+        self._mediapipe_attempted = True
         try:
-            if hasattr(mp, 'solutions'):
+            if mp and hasattr(mp, "solutions"):
                 self.mp_face_detection = mp.solutions.face_detection
                 self.mp_face_mesh = mp.solutions.face_mesh
                 self.face_detection = self.mp_face_detection.FaceDetection(
@@ -64,15 +77,8 @@ class EnhancedFaceDetector:
                     min_tracking_confidence=0.5,
                 )
                 self._mediapipe_available = True
-            else:
-                logger.warning("MediaPipe solutions API not available. Using OpenCV fallback only.")
         except Exception as e:
-            logger.warning(f"Failed to initialize MediaPipe: {e}. Using OpenCV fallback only.")
-
-        # OpenCV cascades as fallback
-        self.face_cascade = cv2.CascadeClassifier(
-            cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
-        )
+            logger.warning("MediaPipe initialization skipped (%s). Using OpenCV fallback.", e)
 
         # Screen activity tracking
         self.last_activity_time = time.time()
@@ -285,6 +291,7 @@ class EnhancedFaceDetector:
 
     # ---- Face detection (MP + fallback) ----
     def detect_faces_mediapipe(self, frame: np.ndarray):
+        self._ensure_mediapipe()
         if not self._mediapipe_available or self.face_detection is None:
             return []
         try:

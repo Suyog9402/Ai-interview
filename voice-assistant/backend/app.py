@@ -19,10 +19,8 @@ from livekit.agents import (
 )
 from livekit.agents.llm import function_tool
 from livekit.agents.voice import MetricsCollectedEvent
-from livekit.plugins import cartesia, deepgram, noise_cancellation, openai, silero
+from livekit.plugins import deepgram, noise_cancellation, openai, silero
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
-from livekit.plugins import openai
-from openai.types.beta.realtime.session import TurnDetection
 
 from app.services.adaptive_question_manager import (
     AdaptiveQuestionManager,
@@ -585,23 +583,28 @@ async def entrypoint(ctx: JobContext):
         role_description = role_name
         logger.info(f"[Interview] Role description: {role_description}")
 
-    # Set up a voice AI pipeline using OpenAI and the LiveKit turn detector
+    # Set up a high-speed Voice AI pipeline using Deepgram STT, Groq LLM, and Deepgram TTS
+    stt_provider = deepgram.STT(
+        model="nova-2", 
+        api_key=os.getenv("DEEPGRAM_API_KEY")
+    )
+    vad_provider = silero.VAD.load()
+    llm_provider = openai.LLM(
+        base_url="https://api.groq.com/openai/v1",
+        api_key=os.getenv("GROQ_API_KEY"),
+        model=os.getenv("GROQ_MODEL", "qwen/qwen3.8-27b"),
+        temperature=0.7,
+    )
+    tts_provider = deepgram.TTS(
+        model="aura-asteria-en", 
+        api_key=os.getenv("DEEPGRAM_API_KEY")
+    )
+
     session = AgentSession(
-        llm=openai.realtime.RealtimeModel(
-            model="gpt-4o-realtime-preview",
-            api_key=os.getenv("OPENAI_API_KEY"),
-            turn_detection=TurnDetection(
-                type="server_vad",
-                threshold=0.8,
-                prefix_padding_ms=300,
-                silence_duration_ms=1000,
-                create_response=True,
-                interrupt_response=True,
-            ),
-        ),
-        # Note: The original TTS provider (Cartesia) is not included here as
-        # openai.realtime.RealtimeModel handles both LLM and TTS.
-        # If you wish to use a separate TTS, you can add it here.
+        stt=stt_provider,
+        vad=vad_provider,
+        llm=llm_provider,
+        tts=tts_provider,
     )
 
     # log metrics as they are emitted, and total usage after session is over
