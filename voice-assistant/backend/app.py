@@ -20,7 +20,6 @@ from livekit.agents import (
 from livekit.agents.llm import function_tool
 from livekit.agents.voice import MetricsCollectedEvent
 from livekit.plugins import deepgram, noise_cancellation, openai, silero
-from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 from app.services.adaptive_question_manager import (
     AdaptiveQuestionManager,
@@ -654,7 +653,7 @@ async def entrypoint(ctx: JobContext):
         session_id=session_id
     )
     
-    logger.info(f"[Interview] ✅ Assistant initialized with adaptive question manager")
+    logger.info(f"[Interview] [+] Assistant initialized with adaptive question manager")
     logger.info(f"[Interview] Interview state: {assistant.question_manager.get_interview_state()}")
 
     await session.start(
@@ -676,6 +675,4 @@ async def entrypoint(ctx: JobContext):
 if __name__ == "__main__":
     cli.run_app(WorkerOptions(
         entrypoint_fnc=entrypoint,
-        prewarm_fnc=prewarm,
-        initialize_process_timeout=60.0,
     ))
