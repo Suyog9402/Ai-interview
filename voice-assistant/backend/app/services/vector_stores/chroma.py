@@ -4,10 +4,10 @@ from langchain_core.documents import Document
 from app.core.llm_provider import get_embeddings
 
 try:
-    from langchain_chroma import Chroma
+    from langchain_community.vectorstores import Chroma
 except ImportError:
     try:
-        from langchain_community.vectorstores import Chroma
+        from langchain_chroma import Chroma
     except ImportError:
         Chroma = None
 

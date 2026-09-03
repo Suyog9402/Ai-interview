@@ -5,10 +5,10 @@ import logging
 from typing import List, Dict, Any
 from app.core.llm_provider import get_chat_llm, get_embeddings
 try:
-    from langchain_chroma import Chroma
+    from langchain_community.vectorstores import Chroma
 except ImportError:
     try:
-        from langchain_community.vectorstores import Chroma
+        from langchain_chroma import Chroma
     except ImportError:
         Chroma = None
 from langchain_core.prompts import ChatPromptTemplate
