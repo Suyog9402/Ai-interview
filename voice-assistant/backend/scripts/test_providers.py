@@ -1,3 +1,4 @@
+import os
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -11,7 +12,7 @@ try:
     client = Groq(api_key=groq_key)
     chat = client.chat.completions.create(
         messages=[{"role": "user", "content": "Respond with: Groq is working!"}],
-        model="llama-3.3-70b-versatile"
+        model=os.getenv("GROQ_MODEL", "qwen/qwen3.8-27b")
     )
     print("[+] Direct Groq Success:", chat.choices[0].message.content.strip())
 except Exception as e:
@@ -22,13 +23,13 @@ print("Testing Gemini GenAI...")
 try:
     import google.generativeai as genai
     genai.configure(api_key=gemini_key)
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel(os.getenv("GEMINI_MODEL", "gemini-2.5-flash"))
     response = model.generate_content("Respond with: Gemini is working!")
     print("[+] Direct Gemini LLM Success:", response.text.strip())
     
     # Test embedding
     result = genai.embed_content(
-        model="models/embedding-001",
+        model=os.getenv("GEMINI_EMBEDDING_MODEL", "models/gemini-embedding-001"),
         content="Test embedding",
         task_type="retrieval_document"
     )

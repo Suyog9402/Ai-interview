@@ -6,9 +6,10 @@ from app.core.llm_provider import get_embeddings
 try:
     from langchain_community.vectorstores import Chroma
 except ImportError:
+    import importlib
     try:
-        from langchain_chroma import Chroma
-    except ImportError:
+        Chroma = getattr(importlib.import_module("langchain_chroma"), "Chroma", None)
+    except Exception:
         Chroma = None
 
 from app.services.vector_stores.base import BaseVectorStore

@@ -7,9 +7,10 @@ from app.core.llm_provider import get_chat_llm, get_embeddings
 try:
     from langchain_community.vectorstores import Chroma
 except ImportError:
+    import importlib
     try:
-        from langchain_chroma import Chroma
-    except ImportError:
+        Chroma = getattr(importlib.import_module("langchain_chroma"), "Chroma", None)
+    except Exception:
         Chroma = None
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_text_splitters import RecursiveCharacterTextSplitter
