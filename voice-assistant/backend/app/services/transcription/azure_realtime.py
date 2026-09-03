@@ -1,6 +1,7 @@
 """
 Azure Realtime Speech-to-Text implementation (stub for future implementation)
 """
+from typing import Dict, Any, List, Optional
 from app.services.transcription.base import BaseTranscriber
 from app.core.exceptions import TranscriptionException
 
