@@ -143,3 +143,9 @@ interview-assistant_key.pem
 
 # Local database files
 voice-assistant/backend/db/
+
+# Personal interview preparation docs
+PROJECT_INTERVIEW_MASTERY_DOCUMENT.*
+voice-assistant/backend/scripts/content_chapters_*.py
+voice-assistant/backend/scripts/build_full_document.py
+voice-assistant/backend/scripts/generate_mastery_doc.py
